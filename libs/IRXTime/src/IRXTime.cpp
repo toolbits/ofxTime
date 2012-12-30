@@ -1486,10 +1486,10 @@ static  char const              irxtime_formatlong[][6] = {
     
     if ((addr = (local) ? (localtime(&utc)) : (gmtime(&utc))) == NULL) {
         error = ERROR_FAILED;
-        std::cout << "IRXTime conversion error at IRXTime::from()" << std::endl;
+        std::cerr << "IRXTime conversion error at IRXTime::from()" << std::endl;
         utc = 0;
         if ((addr = gmtime(&utc)) == NULL) {
-            std::cout << "IRXTime internal fault at IRXTime::from()" << std::endl;
+            std::cerr << "IRXTime internal fault at IRXTime::from()" << std::endl;
         }
     }
     if (addr != NULL) {

@@ -1,0 +1,3465 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>IridiumFrameworks / IRXTime: クラス ir::IRXTime</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">IridiumFrameworks / IRXTime
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>メインページ</span></a></li>
+      <li class="current"><a href="../../annotated.html"><span>クラス</span></a></li>
+      <li><a href="../../files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../annotated.html"><span>構成</span></a></li>
+      <li><a href="../../classes.html"><span>構成索引</span></a></li>
+      <li><a href="../../functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('d0/d8b/classir_1_1_i_r_x_time.html','../../');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>列挙型の値</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 型</a> &#124;
+<a href="#pub-methods">Public メソッド</a> &#124;
+<a href="#pub-static-methods">Static Public メソッド</a> &#124;
+<a href="../../d5/d44/classir_1_1_i_r_x_time-members.html">すべてのメンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">クラス ir::IRXTime</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>時刻を表現するクラス  
+ <a href="../../d0/d8b/classir_1_1_i_r_x_time.html#details">[詳細]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 型</h2></td></tr>
+<tr class="memitem:af2ab92e5c21afbabd2134f0f077dea9d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9d">ErrorEnum</a> { <a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9da282a2ce9d670df222b87b622a88a38f7">ERROR_OK</a>, 
+<a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9dab35c8d66b41c925b3e04ff2140d6c4c3">ERROR_FAILED</a>, 
+<a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9daba77c6fcd41b874931670b2099a526cc">ERROR_INVALID_FORMAT</a>, 
+<a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9dadf3a9dd636de45458ab61f221d1524bf">ERROR_LIMIT</a>
+ }</td></tr>
+<tr class="separator:af2ab92e5c21afbabd2134f0f077dea9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadf174de1041f130599ff440f47b13d1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#aadf174de1041f130599ff440f47b13d1">DayOfWeekEnum</a> { <br/>
+&#160;&#160;<a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#aadf174de1041f130599ff440f47b13d1aa5901827cd97e872389af521f667715f">DAYOFWEEK_SUNDAY</a>, 
+<a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#aadf174de1041f130599ff440f47b13d1a2534dcd24b793158ef4bbdd752ae6b61">DAYOFWEEK_MONDAY</a>, 
+<a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#aadf174de1041f130599ff440f47b13d1a5a36ebd4a491b381619c39bd8e077f69">DAYOFWEEK_TUESDAY</a>, 
+<a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#aadf174de1041f130599ff440f47b13d1a76b87c894965723054b7730a73c5e16e">DAYOFWEEK_WEDNESDAY</a>, 
+<br/>
+&#160;&#160;<a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#aadf174de1041f130599ff440f47b13d1a8d0a0e1a78c565818556a59846109e08">DAYOFWEEK_THURSDAY</a>, 
+<a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#aadf174de1041f130599ff440f47b13d1afb99ea980df079f6e07048ea714b8cf4">DAYOFWEEK_FRIDAY</a>, 
+<a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#aadf174de1041f130599ff440f47b13d1a634b5431e089b83e77da1557d3a5537d">DAYOFWEEK_SATURDAY</a>, 
+<a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#aadf174de1041f130599ff440f47b13d1abfcd755b51d7768e7f359dba573c714d">DAYOFWEEK_LIMIT</a>
+<br/>
+ }</td></tr>
+<tr class="separator:aadf174de1041f130599ff440f47b13d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public メソッド</h2></td></tr>
+<tr class="memitem:af46cfb809b818f3ba1918a66ca1c9c51"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af46cfb809b818f3ba1918a66ca1c9c51">IRXTime</a> (void)</td></tr>
+<tr class="separator:af46cfb809b818f3ba1918a66ca1c9c51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5b7fe23614e80d4ef5f4b84f042c71c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#ab5b7fe23614e80d4ef5f4b84f042c71c">IRXTime</a> (<a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> const &amp;param)</td></tr>
+<tr class="separator:ab5b7fe23614e80d4ef5f4b84f042c71c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf9ee5e23bedfef6a1cb8ba5aed0f258"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#adf9ee5e23bedfef6a1cb8ba5aed0f258">IRXTime</a> (int year, int month, int day, int hour, int minute, int second)</td></tr>
+<tr class="separator:adf9ee5e23bedfef6a1cb8ba5aed0f258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0389f34fffa07c831fa6761affcabc13"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a0389f34fffa07c831fa6761affcabc13">IRXTime</a> (int year, int day, int hour, int minute, int second)</td></tr>
+<tr class="separator:a0389f34fffa07c831fa6761affcabc13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7ed7bb69ef5dec183a6081946abbe3e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#ad7ed7bb69ef5dec183a6081946abbe3e">IRXTime</a> (int year, int hour, int minute, int second)</td></tr>
+<tr class="separator:ad7ed7bb69ef5dec183a6081946abbe3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad94c5b4edb26227cea40ad470930e99f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#ad94c5b4edb26227cea40ad470930e99f">IRXTime</a> (int year, int minute, int second)</td></tr>
+<tr class="separator:ad94c5b4edb26227cea40ad470930e99f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefa411ede0145778e8f473156ee0b64c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#aefa411ede0145778e8f473156ee0b64c">IRXTime</a> (int year, int second)</td></tr>
+<tr class="separator:aefa411ede0145778e8f473156ee0b64c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf0a22a0b83ac9b623edadc97da24530"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#acf0a22a0b83ac9b623edadc97da24530">IRXTime</a> (time_t param)</td></tr>
+<tr class="separator:acf0a22a0b83ac9b623edadc97da24530"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a414755aaf1375753903b190c63a2feb5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a414755aaf1375753903b190c63a2feb5">~IRXTime</a> (void)</td></tr>
+<tr class="separator:a414755aaf1375753903b190c63a2feb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4895c8b3f3c5de923f2ece09ed0dd092"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a4895c8b3f3c5de923f2ece09ed0dd092">operator=</a> (<a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> const &amp;param)</td></tr>
+<tr class="separator:a4895c8b3f3c5de923f2ece09ed0dd092"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d0ce8a833ed46f520233c0d7b144c83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a9d0ce8a833ed46f520233c0d7b144c83">operator+=</a> (<a class="el" href="../../d6/d14/classir_1_1_i_r_x_time_diff.html">IRXTimeDiff</a> const &amp;param)</td></tr>
+<tr class="separator:a9d0ce8a833ed46f520233c0d7b144c83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0ac16e343c751dda67e4542a9d53726"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#aa0ac16e343c751dda67e4542a9d53726">operator-=</a> (<a class="el" href="../../d6/d14/classir_1_1_i_r_x_time_diff.html">IRXTimeDiff</a> const &amp;param)</td></tr>
+<tr class="separator:aa0ac16e343c751dda67e4542a9d53726"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7be7bec8eae1abe1e694cf608153e569"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a7be7bec8eae1abe1e694cf608153e569">operator[]</a> (std::string const &amp;param) const </td></tr>
+<tr class="separator:a7be7bec8eae1abe1e694cf608153e569"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81025c4e99c2afc211f9b6d603bac3f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a81025c4e99c2afc211f9b6d603bac3f8">set</a> (<a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> const &amp;param)</td></tr>
+<tr class="separator:a81025c4e99c2afc211f9b6d603bac3f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a415b30c23098e3fdb8666e66d4f2559e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a415b30c23098e3fdb8666e66d4f2559e">set</a> (int year, int month, int day, int hour, int minute, int second)</td></tr>
+<tr class="separator:a415b30c23098e3fdb8666e66d4f2559e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8a580a3e7a23b72365ba8494af14e4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#ae8a580a3e7a23b72365ba8494af14e4f">get</a> (int *year, int *month, int *day, int *hour, int *minute, int *second, <a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#aadf174de1041f130599ff440f47b13d1">DayOfWeekEnum</a> *week=NULL) const </td></tr>
+<tr class="separator:ae8a580a3e7a23b72365ba8494af14e4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79c07d8702f2864eed1a744080eea1a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a79c07d8702f2864eed1a744080eea1a9">set</a> (int year, int day, int hour, int minute, int second)</td></tr>
+<tr class="separator:a79c07d8702f2864eed1a744080eea1a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91f34daa109248eba9f9bd57183b29ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a91f34daa109248eba9f9bd57183b29ff">get</a> (int *year, int *day, int *hour, int *minute, int *second, <a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#aadf174de1041f130599ff440f47b13d1">DayOfWeekEnum</a> *week=NULL) const </td></tr>
+<tr class="separator:a91f34daa109248eba9f9bd57183b29ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a267adf3e643f6459048eb14ed090debc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a267adf3e643f6459048eb14ed090debc">set</a> (int year, int hour, int minute, int second)</td></tr>
+<tr class="separator:a267adf3e643f6459048eb14ed090debc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5d1a418e210d2906c03c93cef5abbc7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af5d1a418e210d2906c03c93cef5abbc7">get</a> (int *year, int *hour, int *minute, int *second) const </td></tr>
+<tr class="separator:af5d1a418e210d2906c03c93cef5abbc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a43e30d10c374b00b508a1ee9ef9c83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a5a43e30d10c374b00b508a1ee9ef9c83">set</a> (int year, int minute, int second)</td></tr>
+<tr class="separator:a5a43e30d10c374b00b508a1ee9ef9c83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70b4075eee29f2fda84b1e6ff08522cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a70b4075eee29f2fda84b1e6ff08522cc">get</a> (int *year, int *minute, int *second) const </td></tr>
+<tr class="separator:a70b4075eee29f2fda84b1e6ff08522cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac29c861417ea99e560d5be1308aa15f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#ac29c861417ea99e560d5be1308aa15f0">set</a> (int year, int second)</td></tr>
+<tr class="separator:ac29c861417ea99e560d5be1308aa15f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a880a7ee9d1ccaa1877875cbe82059526"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a880a7ee9d1ccaa1877875cbe82059526">get</a> (int *year, int *second) const </td></tr>
+<tr class="separator:a880a7ee9d1ccaa1877875cbe82059526"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc10fef7bde3cab2846ff5556117380e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#acc10fef7bde3cab2846ff5556117380e">set</a> (time_t param)</td></tr>
+<tr class="separator:acc10fef7bde3cab2846ff5556117380e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae619f2623bd94ba11915f88530979de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#aae619f2623bd94ba11915f88530979de">setDate</a> (<a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> const &amp;param)</td></tr>
+<tr class="separator:aae619f2623bd94ba11915f88530979de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bb4087ace0fef37fdbec6ab519c7003"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a1bb4087ace0fef37fdbec6ab519c7003">setDate</a> (int year, int month, int day)</td></tr>
+<tr class="separator:a1bb4087ace0fef37fdbec6ab519c7003"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa29022b8f7772981cfc6d17837e1b880"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#aa29022b8f7772981cfc6d17837e1b880">getDate</a> (int *year, int *month, int *day, <a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#aadf174de1041f130599ff440f47b13d1">DayOfWeekEnum</a> *week=NULL) const </td></tr>
+<tr class="separator:aa29022b8f7772981cfc6d17837e1b880"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5102e57b39e6a6c796eb8fdc675ab674"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a5102e57b39e6a6c796eb8fdc675ab674">setDate</a> (int year, int day)</td></tr>
+<tr class="separator:a5102e57b39e6a6c796eb8fdc675ab674"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94ba74a353124d3bd0dd54cb15b05022"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a94ba74a353124d3bd0dd54cb15b05022">getDate</a> (int *year, int *day, <a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#aadf174de1041f130599ff440f47b13d1">DayOfWeekEnum</a> *week=NULL) const </td></tr>
+<tr class="separator:a94ba74a353124d3bd0dd54cb15b05022"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32670c91018b81cafe41baf8e101c3eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a32670c91018b81cafe41baf8e101c3eb">setTime</a> (<a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> const &amp;param)</td></tr>
+<tr class="separator:a32670c91018b81cafe41baf8e101c3eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac43d3e4433f87ed3c88b20fee5070ce4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#ac43d3e4433f87ed3c88b20fee5070ce4">setTime</a> (int hour, int minute, int second)</td></tr>
+<tr class="separator:ac43d3e4433f87ed3c88b20fee5070ce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d7b0faf255148ebf192db345ec789d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a0d7b0faf255148ebf192db345ec789d4">getTime</a> (int *hour, int *minute, int *second) const </td></tr>
+<tr class="separator:a0d7b0faf255148ebf192db345ec789d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a0fafc2b7d94e5967156dc3201781cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a6a0fafc2b7d94e5967156dc3201781cc">setTime</a> (int minute, int second)</td></tr>
+<tr class="separator:a6a0fafc2b7d94e5967156dc3201781cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68384c960034819cb89220833c6f4c2f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a68384c960034819cb89220833c6f4c2f">getTime</a> (int *minute, int *second) const </td></tr>
+<tr class="separator:a68384c960034819cb89220833c6f4c2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d05c36dd1091bbab8cff616c4e0ff89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a9d05c36dd1091bbab8cff616c4e0ff89">setTime</a> (int second)</td></tr>
+<tr class="separator:a9d05c36dd1091bbab8cff616c4e0ff89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a842e4f1614e891b2728ee6827cee9c71"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a842e4f1614e891b2728ee6827cee9c71">getTime</a> (int *second) const </td></tr>
+<tr class="separator:a842e4f1614e891b2728ee6827cee9c71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53e96c7ad1d9b340d8e83aebe85c2e20"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a53e96c7ad1d9b340d8e83aebe85c2e20">setYear</a> (int param)</td></tr>
+<tr class="separator:a53e96c7ad1d9b340d8e83aebe85c2e20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45953b7418a05a31631f07f96c77c3bd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a45953b7418a05a31631f07f96c77c3bd">getYear</a> (void) const </td></tr>
+<tr class="separator:a45953b7418a05a31631f07f96c77c3bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a358e5cee17e328ca7e6e04b991095f1d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a358e5cee17e328ca7e6e04b991095f1d">setMonth</a> (int param)</td></tr>
+<tr class="separator:a358e5cee17e328ca7e6e04b991095f1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a069f86c6224506eabeb4e51331cc68de"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a069f86c6224506eabeb4e51331cc68de">getMonth</a> (void) const </td></tr>
+<tr class="separator:a069f86c6224506eabeb4e51331cc68de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af417a164662afb4d352713e662185881"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af417a164662afb4d352713e662185881">setDay</a> (int param)</td></tr>
+<tr class="separator:af417a164662afb4d352713e662185881"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1102d8b018726a6fa0cfbb11102c6ed"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#ad1102d8b018726a6fa0cfbb11102c6ed">getDay</a> (void) const </td></tr>
+<tr class="separator:ad1102d8b018726a6fa0cfbb11102c6ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a785815459e759b34d595755b70e97683"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a785815459e759b34d595755b70e97683">setHour</a> (int param)</td></tr>
+<tr class="separator:a785815459e759b34d595755b70e97683"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45714ce7c3cd20247e6a9ff54e641cff"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a45714ce7c3cd20247e6a9ff54e641cff">getHour</a> (void) const </td></tr>
+<tr class="separator:a45714ce7c3cd20247e6a9ff54e641cff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae1f9ef8fe7cd353422fa489884bfdcc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#aae1f9ef8fe7cd353422fa489884bfdcc">setMinute</a> (int param)</td></tr>
+<tr class="separator:aae1f9ef8fe7cd353422fa489884bfdcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75b7efdad7b4103cab7e2c736c38b80d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a75b7efdad7b4103cab7e2c736c38b80d">getMinute</a> (void) const </td></tr>
+<tr class="separator:a75b7efdad7b4103cab7e2c736c38b80d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78bd220296302e57b2ec33a0e483230a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a78bd220296302e57b2ec33a0e483230a">setSecond</a> (int param)</td></tr>
+<tr class="separator:a78bd220296302e57b2ec33a0e483230a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56f6e8eb99bd896fc40299cc814a604b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a56f6e8eb99bd896fc40299cc814a604b">getSecond</a> (void) const </td></tr>
+<tr class="separator:a56f6e8eb99bd896fc40299cc814a604b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa679727b972467ada1a1da7b5ffe14e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#aadf174de1041f130599ff440f47b13d1">DayOfWeekEnum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#aa679727b972467ada1a1da7b5ffe14e8">getDayOfWeek</a> (void) const </td></tr>
+<tr class="separator:aa679727b972467ada1a1da7b5ffe14e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5a0d50fa2971d84b2eb44e6898e419f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#ac5a0d50fa2971d84b2eb44e6898e419f">add</a> (<a class="el" href="../../d6/d14/classir_1_1_i_r_x_time_diff.html">IRXTimeDiff</a> const &amp;param)</td></tr>
+<tr class="separator:ac5a0d50fa2971d84b2eb44e6898e419f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeffe9c0405b8c307767fd1783c697af7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#aeffe9c0405b8c307767fd1783c697af7">addYear</a> (int param)</td></tr>
+<tr class="separator:aeffe9c0405b8c307767fd1783c697af7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9fb81ac82bb8b07620ea8926a0a251d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#ab9fb81ac82bb8b07620ea8926a0a251d">addMonth</a> (int param)</td></tr>
+<tr class="separator:ab9fb81ac82bb8b07620ea8926a0a251d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d23414f52493a387337f5098beea48f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a3d23414f52493a387337f5098beea48f">addDay</a> (int param)</td></tr>
+<tr class="separator:a3d23414f52493a387337f5098beea48f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc373f24b58e35e0e9638a4caaf946ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#acc373f24b58e35e0e9638a4caaf946ec">addHour</a> (int param)</td></tr>
+<tr class="separator:acc373f24b58e35e0e9638a4caaf946ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af973914de803bde6071ae468d5055ddc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af973914de803bde6071ae468d5055ddc">addMinute</a> (int param)</td></tr>
+<tr class="separator:af973914de803bde6071ae468d5055ddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a629a57769351220aab34282f45d92008"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a629a57769351220aab34282f45d92008">addSecond</a> (int param)</td></tr>
+<tr class="separator:a629a57769351220aab34282f45d92008"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f73208ddcc8d254fb9ec89fdd4f09d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a3f73208ddcc8d254fb9ec89fdd4f09d2">sub</a> (<a class="el" href="../../d6/d14/classir_1_1_i_r_x_time_diff.html">IRXTimeDiff</a> const &amp;param)</td></tr>
+<tr class="separator:a3f73208ddcc8d254fb9ec89fdd4f09d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d6c1a1422050c48d8e0458ffa7b8bee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a8d6c1a1422050c48d8e0458ffa7b8bee">subYear</a> (int param)</td></tr>
+<tr class="separator:a8d6c1a1422050c48d8e0458ffa7b8bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25fba5e25ac93c77e2dea768ae5effcb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a25fba5e25ac93c77e2dea768ae5effcb">subMonth</a> (int param)</td></tr>
+<tr class="separator:a25fba5e25ac93c77e2dea768ae5effcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4efa28ed9ef2ce0b307b9c32ee851a90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a4efa28ed9ef2ce0b307b9c32ee851a90">subDay</a> (int param)</td></tr>
+<tr class="separator:a4efa28ed9ef2ce0b307b9c32ee851a90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb74ad6bf981d0c5cb1ad06edcb4211d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#acb74ad6bf981d0c5cb1ad06edcb4211d">subHour</a> (int param)</td></tr>
+<tr class="separator:acb74ad6bf981d0c5cb1ad06edcb4211d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef3044e92b4e866049e92c8b50d91456"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#aef3044e92b4e866049e92c8b50d91456">subMinute</a> (int param)</td></tr>
+<tr class="separator:aef3044e92b4e866049e92c8b50d91456"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affcd00a51be6cbfb5cca56a23fcd122d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#affcd00a51be6cbfb5cca56a23fcd122d">subSecond</a> (int param)</td></tr>
+<tr class="separator:affcd00a51be6cbfb5cca56a23fcd122d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f06ab3a307334033bcc616f47cde2c2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a2f06ab3a307334033bcc616f47cde2c2">equals</a> (<a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> const &amp;param) const </td></tr>
+<tr class="separator:a2f06ab3a307334033bcc616f47cde2c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40d573efd3026ee5c2545e463f185367"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a40d573efd3026ee5c2545e463f185367">equalsDate</a> (<a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> const &amp;param) const </td></tr>
+<tr class="separator:a40d573efd3026ee5c2545e463f185367"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72bf03262d77dbf9087dec65d8ae2710"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a72bf03262d77dbf9087dec65d8ae2710">equalsTime</a> (<a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> const &amp;param) const </td></tr>
+<tr class="separator:a72bf03262d77dbf9087dec65d8ae2710"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a961dc22c59ff1a603562016da56be838"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a961dc22c59ff1a603562016da56be838">compare</a> (<a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> const &amp;param) const </td></tr>
+<tr class="separator:a961dc22c59ff1a603562016da56be838"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5094089e1345c816ba1c13b80408210"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#ad5094089e1345c816ba1c13b80408210">compareDate</a> (<a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> const &amp;param) const </td></tr>
+<tr class="separator:ad5094089e1345c816ba1c13b80408210"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a978a530a520e904eea5d547a86300b3a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a978a530a520e904eea5d547a86300b3a">compareTime</a> (<a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> const &amp;param) const </td></tr>
+<tr class="separator:a978a530a520e904eea5d547a86300b3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af80a89a5aa711bf04051a02a0667248f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d14/classir_1_1_i_r_x_time_diff.html">IRXTimeDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af80a89a5aa711bf04051a02a0667248f">difference</a> (<a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> const &amp;param) const </td></tr>
+<tr class="separator:af80a89a5aa711bf04051a02a0667248f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4a052b36db79c7fd5ca2aeca6aebf82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9d">ErrorEnum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#ae4a052b36db79c7fd5ca2aeca6aebf82">parse</a> (std::string const &amp;<a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a3b12f12869b8cb1ffcac5d6378c2a08f">format</a>, std::string const &amp;string)</td></tr>
+<tr class="separator:ae4a052b36db79c7fd5ca2aeca6aebf82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aface81ff12931c38bf1541a83880add6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9d">ErrorEnum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#aface81ff12931c38bf1541a83880add6">parseYMD</a> (std::string const &amp;string, char delimiter= '/')</td></tr>
+<tr class="separator:aface81ff12931c38bf1541a83880add6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab68ec520dc7912b93d9e4051f342fd68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9d">ErrorEnum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#ab68ec520dc7912b93d9e4051f342fd68">parseMDY</a> (std::string const &amp;string, char delimiter= '/')</td></tr>
+<tr class="separator:ab68ec520dc7912b93d9e4051f342fd68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93db4cc88d452a4221201a717f018593"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9d">ErrorEnum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a93db4cc88d452a4221201a717f018593">parseDMY</a> (std::string const &amp;string, char delimiter= '/')</td></tr>
+<tr class="separator:a93db4cc88d452a4221201a717f018593"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12ce84ddb5940fad18326d325a7bb8b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9d">ErrorEnum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a12ce84ddb5940fad18326d325a7bb8b0">parseISO8601</a> (std::string const &amp;string, bool extended=false)</td></tr>
+<tr class="separator:a12ce84ddb5940fad18326d325a7bb8b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b12f12869b8cb1ffcac5d6378c2a08f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a3b12f12869b8cb1ffcac5d6378c2a08f">format</a> (std::string const &amp;format) const </td></tr>
+<tr class="separator:a3b12f12869b8cb1ffcac5d6378c2a08f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f2dc54f45681788c8d0c3272726031b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a4f2dc54f45681788c8d0c3272726031b">formatYMD</a> (char delimiter= '/') const </td></tr>
+<tr class="separator:a4f2dc54f45681788c8d0c3272726031b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a351a5e18f586c080ef98e95305b23dfb"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a351a5e18f586c080ef98e95305b23dfb">formatMDY</a> (char delimiter= '/') const </td></tr>
+<tr class="separator:a351a5e18f586c080ef98e95305b23dfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e1a5d3c6ae5e18e32588ac268b7861a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a3e1a5d3c6ae5e18e32588ac268b7861a">formatDMY</a> (char delimiter= '/') const </td></tr>
+<tr class="separator:a3e1a5d3c6ae5e18e32588ac268b7861a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fb515c95138e1d6f694e2fa1722ac61"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a7fb515c95138e1d6f694e2fa1722ac61">formatISO8601</a> (bool extended=false) const </td></tr>
+<tr class="separator:a7fb515c95138e1d6f694e2fa1722ac61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5f35d825656f24accb1c6bff7d3f530"><td class="memItemLeft" align="right" valign="top">time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#ab5f35d825656f24accb1c6bff7d3f530">asTime_t</a> (void) const </td></tr>
+<tr class="separator:ab5f35d825656f24accb1c6bff7d3f530"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public メソッド</h2></td></tr>
+<tr class="memitem:a736dde52fc8179ce625562db57cffa5b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a736dde52fc8179ce625562db57cffa5b">epochTime</a> (void)</td></tr>
+<tr class="separator:a736dde52fc8179ce625562db57cffa5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac963c7dad69a5e341693ac005f6454ba"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#ac963c7dad69a5e341693ac005f6454ba">epochUTCTime</a> (void)</td></tr>
+<tr class="separator:ac963c7dad69a5e341693ac005f6454ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95c19d163f2d364e2126d14352e23a85"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a95c19d163f2d364e2126d14352e23a85">currentTime</a> (void)</td></tr>
+<tr class="separator:a95c19d163f2d364e2126d14352e23a85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6a91528c1570127194a6ab3bb21a45c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af6a91528c1570127194a6ab3bb21a45c">currentUTCTime</a> (void)</td></tr>
+<tr class="separator:af6a91528c1570127194a6ab3bb21a45c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">説明</h2>
+<div class="textblock"><p>時刻を表現するクラス </p>
+<p>時刻を扱うには <a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html" title="時刻を表現するクラス">IRXTime</a> クラスを利用します。 ２つの時刻の差を扱うには <a class="el" href="../../d6/d14/classir_1_1_i_r_x_time_diff.html" title="時刻差を表現するクラス">IRXTimeDiff</a> クラスを利用します。</p>
+<p><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html" title="時刻を表現するクラス">IRXTime</a> クラスの代表的な使い方</p>
+<p>使い方１：「年/月/日 (曜日) 時:分:秒」の書式に従って文字列を書き出す </p>
+<div class="fragment"><div class="line"><a class="code" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af46cfb809b818f3ba1918a66ca1c9c51">IRXTime</a> time;</div>
+<div class="line"><span class="keywordtype">string</span> str;</div>
+<div class="line"></div>
+<div class="line">time = <a class="code" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a95c19d163f2d364e2126d14352e23a85">IRXTime::currentTime</a>();</div>
+<div class="line">str = time.format(<span class="stringliteral">&quot;%YYYY/%MM/%DD (%WEK) %hh:%mm:%ss&quot;</span>);</div>
+<div class="line">cout &lt;&lt; str &lt;&lt; endl;</div>
+</div><!-- fragment --><p> 使い方２：「年/月/日 (曜日) 時:分:秒」の書式に従って文字列から読み込む </p>
+<div class="fragment"><div class="line"><span class="keywordtype">string</span> str;</div>
+<div class="line"><a class="code" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af46cfb809b818f3ba1918a66ca1c9c51">IRXTime</a> time;</div>
+<div class="line"><a class="code" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9d">IRXTime::ErrorEnum</a> error;</div>
+<div class="line"></div>
+<div class="line">str = <span class="stringliteral">&quot;2012/11/07 (WED) 14:48:45&quot;</span>;</div>
+<div class="line">error = time.parse(<span class="stringliteral">&quot;%YYYY/%MM/%DD (%WEK) %hh:%mm:%ss&quot;</span>, str);</div>
+<div class="line"><span class="keywordflow">if</span> (error == <a class="code" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9da282a2ce9d670df222b87b622a88a38f7" title="エラーなし">IRXTime::ERROR_OK</a>) {</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;time = &quot;</span> &lt;&lt; time.format(<span class="stringliteral">&quot;%YYYY/%MM/%DD (%WEK) %hh:%mm:%ss&quot;</span>) &lt;&lt; endl;</div>
+<div class="line">}</div>
+<div class="line"><span class="keywordflow">else</span> {</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;error = &quot;</span> &lt;&lt; error &lt;&lt; endl;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> 使い方３：柔軟な文字列の読み込み </p>
+<div class="fragment"><div class="line"><span class="keywordtype">string</span> str;</div>
+<div class="line"><a class="code" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af46cfb809b818f3ba1918a66ca1c9c51">IRXTime</a> time;</div>
+<div class="line"><a class="code" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9d">IRXTime::ErrorEnum</a> error;</div>
+<div class="line"></div>
+<div class="line">str = <span class="stringliteral">&quot;today  is 2012/11/7    14:48:45 WED&quot;</span>;</div>
+<div class="line">error = time.parse(<span class="stringliteral">&quot;%***** is %YYYY/%M/%D %hh:%mm:%ss&quot;</span>, str);</div>
+<div class="line"><span class="keywordflow">if</span> (error == <a class="code" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9da282a2ce9d670df222b87b622a88a38f7" title="エラーなし">IRXTime::ERROR_OK</a>) {</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;time = &quot;</span> &lt;&lt; time.formatYMD() &lt;&lt; endl;</div>
+<div class="line">}</div>
+<div class="line"><span class="keywordflow">else</span> {</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;error = &quot;</span> &lt;&lt; error &lt;&lt; endl;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> 使い方４：時刻を表す文字列の変換 </p>
+<div class="fragment"><div class="line"><span class="keywordtype">string</span> str;</div>
+<div class="line"><a class="code" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af46cfb809b818f3ba1918a66ca1c9c51">IRXTime</a> time;</div>
+<div class="line"><a class="code" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9d">IRXTime::ErrorEnum</a> error;</div>
+<div class="line"></div>
+<div class="line">str = <span class="stringliteral">&quot;NOV 7/2012 (WED) - 14:48:45&quot;</span>;</div>
+<div class="line">error = time.parse(<span class="stringliteral">&quot;%MTH %D/%Y (%***) - %h:%m:%s&quot;</span>, str);</div>
+<div class="line"><span class="keywordflow">if</span> (error == <a class="code" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9da282a2ce9d670df222b87b622a88a38f7" title="エラーなし">IRXTime::ERROR_OK</a>) {</div>
+<div class="line">    str = time.format(<span class="stringliteral">&quot;%YYYY/%MM/%DD (%WEEK) %hh:%mm:%ss&quot;</span>);</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;time = &quot;</span> &lt;&lt; str &lt;&lt; endl;</div>
+<div class="line">}</div>
+<div class="line"><span class="keywordflow">else</span> {</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;error = &quot;</span> &lt;&lt; error &lt;&lt; endl;</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div><h2 class="groupheader">列挙型</h2>
+<a class="anchor" id="af2ab92e5c21afbabd2134f0f077dea9d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9d">ir::IRXTime::ErrorEnum</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>エラーを表す定数です。 </p>
+<dl><dt><b>列挙型の値: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="af2ab92e5c21afbabd2134f0f077dea9da282a2ce9d670df222b87b622a88a38f7"></a>ERROR_OK</em>&nbsp;</td><td>
+<p>エラーなし </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="af2ab92e5c21afbabd2134f0f077dea9dab35c8d66b41c925b3e04ff2140d6c4c3"></a>ERROR_FAILED</em>&nbsp;</td><td>
+<p>一般的なエラー </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="af2ab92e5c21afbabd2134f0f077dea9daba77c6fcd41b874931670b2099a526cc"></a>ERROR_INVALID_FORMAT</em>&nbsp;</td><td>
+<p>書式が正しくない </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="af2ab92e5c21afbabd2134f0f077dea9dadf3a9dd636de45458ab61f221d1524bf"></a>ERROR_LIMIT</em>&nbsp;</td><td>
+<p>エラー定数の最大値 </p>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aadf174de1041f130599ff440f47b13d1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#aadf174de1041f130599ff440f47b13d1">ir::IRXTime::DayOfWeekEnum</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>曜日を表す定数です。 </p>
+<dl><dt><b>列挙型の値: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="aadf174de1041f130599ff440f47b13d1aa5901827cd97e872389af521f667715f"></a>DAYOFWEEK_SUNDAY</em>&nbsp;</td><td>
+<p>日曜日 </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="aadf174de1041f130599ff440f47b13d1a2534dcd24b793158ef4bbdd752ae6b61"></a>DAYOFWEEK_MONDAY</em>&nbsp;</td><td>
+<p>月曜日 </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="aadf174de1041f130599ff440f47b13d1a5a36ebd4a491b381619c39bd8e077f69"></a>DAYOFWEEK_TUESDAY</em>&nbsp;</td><td>
+<p>火曜日 </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="aadf174de1041f130599ff440f47b13d1a76b87c894965723054b7730a73c5e16e"></a>DAYOFWEEK_WEDNESDAY</em>&nbsp;</td><td>
+<p>水曜日 </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="aadf174de1041f130599ff440f47b13d1a8d0a0e1a78c565818556a59846109e08"></a>DAYOFWEEK_THURSDAY</em>&nbsp;</td><td>
+<p>木曜日 </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="aadf174de1041f130599ff440f47b13d1afb99ea980df079f6e07048ea714b8cf4"></a>DAYOFWEEK_FRIDAY</em>&nbsp;</td><td>
+<p>金曜日 </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="aadf174de1041f130599ff440f47b13d1a634b5431e089b83e77da1557d3a5537d"></a>DAYOFWEEK_SATURDAY</em>&nbsp;</td><td>
+<p>土曜日 </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="aadf174de1041f130599ff440f47b13d1abfcd755b51d7768e7f359dba573c714d"></a>DAYOFWEEK_LIMIT</em>&nbsp;</td><td>
+<p>曜日定数の最大値 </p>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">コンストラクタとデストラクタ</h2>
+<a class="anchor" id="af46cfb809b818f3ba1918a66ca1c9c51"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ir::IRXTime::IRXTime </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>コンストラクタです。 1970/01/01 00:00:00 が初期値となります。 </p>
+
+</div>
+</div>
+<a class="anchor" id="ab5b7fe23614e80d4ef5f4b84f042c71c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ir::IRXTime::IRXTime </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> const &amp;&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>コンストラクタです。 引数に指定した値が初期値となります。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>初期値 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="adf9ee5e23bedfef6a1cb8ba5aed0f258"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ir::IRXTime::IRXTime </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>year</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>month</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>day</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>hour</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>minute</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>second</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>コンストラクタです。 引数に指定した年・月・日・時・分・秒をもとにして初期値を設定します。 各桁で繰り上げや繰り下げが発生したときにも正しく設定されます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">year</td><td>年の初期値 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">month</td><td>月の初期値 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">day</td><td>日の初期値 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hour</td><td>時の初期値 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">minute</td><td>分の初期値 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">second</td><td>秒の初期値 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0389f34fffa07c831fa6761affcabc13"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ir::IRXTime::IRXTime </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>year</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>day</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>hour</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>minute</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>second</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>コンストラクタです。 引数に指定した年・日・時・分・秒をもとにして初期値を設定します。 各桁で繰り上げや繰り下げが発生したときにも正しく設定されます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">year</td><td>年の初期値 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">day</td><td>日の初期値 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hour</td><td>時の初期値 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">minute</td><td>分の初期値 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">second</td><td>秒の初期値 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad7ed7bb69ef5dec183a6081946abbe3e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ir::IRXTime::IRXTime </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>year</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>hour</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>minute</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>second</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>コンストラクタです。 引数に指定した年・時・分・秒をもとにして初期値を設定します。 各桁で繰り上げや繰り下げが発生したときにも正しく設定されます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">year</td><td>年の初期値 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hour</td><td>時の初期値 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">minute</td><td>分の初期値 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">second</td><td>秒の初期値 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad94c5b4edb26227cea40ad470930e99f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ir::IRXTime::IRXTime </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>year</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>minute</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>second</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>コンストラクタです。 引数に指定した年・分・秒をもとにして初期値を設定します。 各桁で繰り上げや繰り下げが発生したときにも正しく設定されます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">year</td><td>年の初期値 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">minute</td><td>分の初期値 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">second</td><td>秒の初期値 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aefa411ede0145778e8f473156ee0b64c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ir::IRXTime::IRXTime </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>year</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>second</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>コンストラクタです。 引数に指定した年・秒をもとにして初期値を設定します。 各桁で繰り上げや繰り下げが発生したときにも正しく設定されます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">year</td><td>年の初期値 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">second</td><td>秒の初期値 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="acf0a22a0b83ac9b623edadc97da24530"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ir::IRXTime::IRXTime </td>
+          <td>(</td>
+          <td class="paramtype">time_t&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>コンストラクタです。 引数に指定した POSIX 時刻をもとにして初期値を設定します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>POSIX 時刻の初期値 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a414755aaf1375753903b190c63a2feb5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ir::IRXTime::~IRXTime </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>デストラクタです。 </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数</h2>
+<a class="anchor" id="a4895c8b3f3c5de923f2ece09ed0dd092"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp; ir::IRXTime::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> const &amp;&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>値を代入します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>代入する値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分への参照 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9d0ce8a833ed46f520233c0d7b144c83"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp; ir::IRXTime::operator+= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/d14/classir_1_1_i_r_x_time_diff.html">IRXTimeDiff</a> const &amp;&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>時刻差を加算します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>加算する値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分への参照 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa0ac16e343c751dda67e4542a9d53726"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp; ir::IRXTime::operator-= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/d14/classir_1_1_i_r_x_time_diff.html">IRXTimeDiff</a> const &amp;&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>時刻差を減算します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>減算する値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分への参照 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7be7bec8eae1abe1e694cf608153e569"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ir::IRXTime::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>引数に指定した時刻の要素を取得します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>取得する要素（大文字と小文字は区別しない） <ul>
+<li>"year" : 年 </li>
+<li>"month" : 月 </li>
+<li>"day" : 日 </li>
+<li>"hour" : 時 </li>
+<li>"minute" : 分 </li>
+<li>"second" : 秒 </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>現在の値 </dd></dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">&lt;0</td><td>指定した要素が存在しない </td></tr>
+    <tr><td class="paramname">&gt;=0</td><td>取得に成功 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a81025c4e99c2afc211f9b6d603bac3f8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp; ir::IRXTime::set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> const &amp;&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>値を設定します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>設定する値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分への参照 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a415b30c23098e3fdb8666e66d4f2559e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp; ir::IRXTime::set </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>year</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>month</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>day</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>hour</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>minute</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>second</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>引数に指定した年・月・日・時・分・秒をもとにして値を設定します。 各桁で繰り上げや繰り下げが発生したときにも正しく設定されます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">year</td><td>設定する年 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">month</td><td>設定する月 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">day</td><td>設定する日 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hour</td><td>設定する時 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">minute</td><td>設定する分 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">second</td><td>設定する秒 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分への参照 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae8a580a3e7a23b72365ba8494af14e4f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ir::IRXTime::get </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>year</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>month</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>day</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>hour</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>minute</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>second</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#aadf174de1041f130599ff440f47b13d1">DayOfWeekEnum</a> *&#160;</td>
+          <td class="paramname"><em>week</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>値を年・月・日・時・分・秒・曜日に分解して取得します。 各桁を取得する必要がない場合にはそれぞれの引数に NULL を指定することができます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">year</td><td>現在の年 <ul>
+<li>NULL : 年を返さない </li>
+<li>その他 </li>
+</ul>
+</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">month</td><td>現在の月 <ul>
+<li>NULL : 月を返さない </li>
+<li>その他 </li>
+</ul>
+</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">day</td><td>現在の日 <ul>
+<li>NULL : 日を返さない </li>
+<li>その他 </li>
+</ul>
+</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">hour</td><td>現在の時 <ul>
+<li>NULL : 時を返さない </li>
+<li>その他 </li>
+</ul>
+</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">minute</td><td>現在の分 <ul>
+<li>NULL : 分を返さない </li>
+<li>その他 </li>
+</ul>
+</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">second</td><td>現在の秒 <ul>
+<li>NULL : 秒を返さない </li>
+<li>その他 </li>
+</ul>
+</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">week</td><td>現在の曜日 <ul>
+<li>NULL : 曜日を返さない </li>
+<li>その他 </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>なし </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a79c07d8702f2864eed1a744080eea1a9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp; ir::IRXTime::set </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>year</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>day</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>hour</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>minute</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>second</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>引数に指定した年・日・時・分・秒をもとにして値を設定します。 各桁で繰り上げや繰り下げが発生したときにも正しく設定されます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">year</td><td>設定する年 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">day</td><td>設定する日 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hour</td><td>設定する時 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">minute</td><td>設定する分 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">second</td><td>設定する秒 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分への参照 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a91f34daa109248eba9f9bd57183b29ff"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ir::IRXTime::get </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>year</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>day</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>hour</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>minute</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>second</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#aadf174de1041f130599ff440f47b13d1">DayOfWeekEnum</a> *&#160;</td>
+          <td class="paramname"><em>week</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>値を年・日・時・分・秒・曜日に分解して取得します。 各桁を取得する必要がない場合にはそれぞれの引数に NULL を指定することができます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">year</td><td>現在の年 <ul>
+<li>NULL : 年を返さない </li>
+<li>その他 </li>
+</ul>
+</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">day</td><td>現在の日 <ul>
+<li>NULL : 日を返さない </li>
+<li>その他 </li>
+</ul>
+</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">hour</td><td>現在の時 <ul>
+<li>NULL : 時を返さない </li>
+<li>その他 </li>
+</ul>
+</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">minute</td><td>現在の分 <ul>
+<li>NULL : 分を返さない </li>
+<li>その他 </li>
+</ul>
+</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">second</td><td>現在の秒 <ul>
+<li>NULL : 秒を返さない </li>
+<li>その他 </li>
+</ul>
+</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">week</td><td>現在の曜日 <ul>
+<li>NULL : 曜日を返さない </li>
+<li>その他 </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>なし </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a267adf3e643f6459048eb14ed090debc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp; ir::IRXTime::set </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>year</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>hour</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>minute</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>second</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>引数に指定した年・時・分・秒をもとにして値を設定します。 各桁で繰り上げや繰り下げが発生したときにも正しく設定されます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">year</td><td>設定する年 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hour</td><td>設定する時 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">minute</td><td>設定する分 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">second</td><td>設定する秒 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分への参照 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af5d1a418e210d2906c03c93cef5abbc7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ir::IRXTime::get </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>year</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>hour</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>minute</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>second</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>値を年・時・分・秒に分解して取得します。 各桁を取得する必要がない場合にはそれぞれの引数に NULL を指定することができます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">year</td><td>現在の年 <ul>
+<li>NULL : 年を返さない </li>
+<li>その他 </li>
+</ul>
+</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">hour</td><td>現在の時 <ul>
+<li>NULL : 時を返さない </li>
+<li>その他 </li>
+</ul>
+</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">minute</td><td>現在の分 <ul>
+<li>NULL : 分を返さない </li>
+<li>その他 </li>
+</ul>
+</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">second</td><td>現在の秒 <ul>
+<li>NULL : 秒を返さない </li>
+<li>その他 </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>なし </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5a43e30d10c374b00b508a1ee9ef9c83"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp; ir::IRXTime::set </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>year</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>minute</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>second</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>引数に指定した年・分・秒をもとにして値を設定します。 各桁で繰り上げや繰り下げが発生したときにも正しく設定されます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">year</td><td>設定する年 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">minute</td><td>設定する分 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">second</td><td>設定する秒 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分への参照 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a70b4075eee29f2fda84b1e6ff08522cc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ir::IRXTime::get </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>year</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>minute</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>second</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>値を年・分・秒に分解して取得します。 各桁を取得する必要がない場合にはそれぞれの引数に NULL を指定することができます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">year</td><td>現在の年 <ul>
+<li>NULL : 年を返さない </li>
+<li>その他 </li>
+</ul>
+</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">minute</td><td>現在の分 <ul>
+<li>NULL : 分を返さない </li>
+<li>その他 </li>
+</ul>
+</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">second</td><td>現在の秒 <ul>
+<li>NULL : 秒を返さない </li>
+<li>その他 </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>なし </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac29c861417ea99e560d5be1308aa15f0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp; ir::IRXTime::set </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>year</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>second</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>引数に指定した年・秒をもとにして値を設定します。 各桁で繰り上げや繰り下げが発生したときにも正しく設定されます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">year</td><td>設定する年 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">second</td><td>設定する秒 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分への参照 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a880a7ee9d1ccaa1877875cbe82059526"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ir::IRXTime::get </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>year</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>second</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>値を年・秒に分解して取得します。 各桁を取得する必要がない場合にはそれぞれの引数に NULL を指定することができます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">year</td><td>現在の年 <ul>
+<li>NULL : 年を返さない </li>
+<li>その他 </li>
+</ul>
+</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">second</td><td>現在の秒 <ul>
+<li>NULL : 秒を返さない </li>
+<li>その他 </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>なし </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acc10fef7bde3cab2846ff5556117380e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp; ir::IRXTime::set </td>
+          <td>(</td>
+          <td class="paramtype">time_t&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>引数に指定した POSIX 時刻をもとにして値を設定します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>設定する POSIX 時刻 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分への参照 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aae619f2623bd94ba11915f88530979de"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp; ir::IRXTime::setDate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> const &amp;&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>日付部分を設定します。 繰り上げや繰り下げが発生したときにも正しく設定されます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>設定する値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分への参照 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1bb4087ace0fef37fdbec6ab519c7003"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp; ir::IRXTime::setDate </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>year</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>month</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>day</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>引数に指定した年・月・日をもとにして日付部分を設定します。 各桁で繰り上げや繰り下げが発生したときにも正しく設定されます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">year</td><td>設定する年 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">month</td><td>設定する月 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">day</td><td>設定する日 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分への参照 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa29022b8f7772981cfc6d17837e1b880"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ir::IRXTime::getDate </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>year</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>month</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>day</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#aadf174de1041f130599ff440f47b13d1">DayOfWeekEnum</a> *&#160;</td>
+          <td class="paramname"><em>week</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>日付部分を年・月・日・曜日に分解して取得します。 各桁を取得する必要がない場合にはそれぞれの引数に NULL を指定することができます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">year</td><td>現在の年 <ul>
+<li>NULL : 年を返さない </li>
+<li>その他 </li>
+</ul>
+</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">month</td><td>現在の月 <ul>
+<li>NULL : 月を返さない </li>
+<li>その他 </li>
+</ul>
+</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">day</td><td>現在の日 <ul>
+<li>NULL : 日を返さない </li>
+<li>その他 </li>
+</ul>
+</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">week</td><td>現在の曜日 <ul>
+<li>NULL : 曜日を返さない </li>
+<li>その他 </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>なし </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5102e57b39e6a6c796eb8fdc675ab674"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp; ir::IRXTime::setDate </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>year</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>day</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>引数に指定した年・日をもとにして日付部分を設定します。 各桁で繰り上げや繰り下げが発生したときにも正しく設定されます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">year</td><td>設定する年 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">day</td><td>設定する日 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分への参照 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a94ba74a353124d3bd0dd54cb15b05022"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ir::IRXTime::getDate </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>year</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>day</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#aadf174de1041f130599ff440f47b13d1">DayOfWeekEnum</a> *&#160;</td>
+          <td class="paramname"><em>week</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>日付部分を年・日・曜日に分解して取得します。 各桁を取得する必要がない場合にはそれぞれの引数に NULL を指定することができます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">year</td><td>現在の年 <ul>
+<li>NULL : 年を返さない </li>
+<li>その他 </li>
+</ul>
+</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">day</td><td>現在の日 <ul>
+<li>NULL : 日を返さない </li>
+<li>その他 </li>
+</ul>
+</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">week</td><td>現在の曜日 <ul>
+<li>NULL : 曜日を返さない </li>
+<li>その他 </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>なし </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a32670c91018b81cafe41baf8e101c3eb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp; ir::IRXTime::setTime </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> const &amp;&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>時刻部分を設定します。 繰り上げや繰り下げが発生したときにも正しく設定されます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>設定する値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分への参照 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac43d3e4433f87ed3c88b20fee5070ce4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp; ir::IRXTime::setTime </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>hour</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>minute</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>second</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>引数に指定した時・分・秒をもとにして時刻部分を設定します。 各桁で繰り上げや繰り下げが発生したときにも正しく設定されます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">hour</td><td>設定する時 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">minute</td><td>設定する分 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">second</td><td>設定する秒 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分への参照 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0d7b0faf255148ebf192db345ec789d4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ir::IRXTime::getTime </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>hour</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>minute</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>second</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>時刻部分を時・分・秒に分解して取得します。 各桁を取得する必要がない場合にはそれぞれの引数に NULL を指定することができます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">hour</td><td>現在の時 <ul>
+<li>NULL : 時を返さない </li>
+<li>その他 </li>
+</ul>
+</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">minute</td><td>現在の分 <ul>
+<li>NULL : 分を返さない </li>
+<li>その他 </li>
+</ul>
+</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">second</td><td>現在の秒 <ul>
+<li>NULL : 秒を返さない </li>
+<li>その他 </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>午前０時からの経過秒 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6a0fafc2b7d94e5967156dc3201781cc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp; ir::IRXTime::setTime </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>minute</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>second</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>引数に指定した分・秒をもとにして時刻部分を設定します。 各桁で繰り上げや繰り下げが発生したときにも正しく設定されます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">minute</td><td>設定する分 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">second</td><td>設定する秒 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分への参照 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a68384c960034819cb89220833c6f4c2f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ir::IRXTime::getTime </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>minute</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>second</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>時刻部分を分・秒に分解して取得します。 各桁を取得する必要がない場合にはそれぞれの引数に NULL を指定することができます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">minute</td><td>現在の分 <ul>
+<li>NULL : 分を返さない </li>
+<li>その他 </li>
+</ul>
+</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">second</td><td>現在の秒 <ul>
+<li>NULL : 秒を返さない </li>
+<li>その他 </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>午前０時からの経過秒 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9d05c36dd1091bbab8cff616c4e0ff89"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp; ir::IRXTime::setTime </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>second</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>引数に指定した秒をもとにして時刻部分を設定します。 繰り上げや繰り下げが発生したときにも正しく設定されます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">second</td><td>設定する秒 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分への参照 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a842e4f1614e891b2728ee6827cee9c71"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ir::IRXTime::getTime </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>second</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>時刻部分を秒に分解して取得します。 取得する必要がない場合には引数に NULL を指定することができます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">second</td><td>現在の秒 <ul>
+<li>NULL : 秒を返さない </li>
+<li>その他 </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>午前０時からの経過秒 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a53e96c7ad1d9b340d8e83aebe85c2e20"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp; ir::IRXTime::setYear </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>年を設定します。 繰り上げや繰り下げが発生したときにも正しく設定されます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>設定する値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分への参照 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a45953b7418a05a31631f07f96c77c3bd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ir::IRXTime::getYear </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>年を取得します。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>現在の値 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a358e5cee17e328ca7e6e04b991095f1d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp; ir::IRXTime::setMonth </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>月を設定します。 繰り上げや繰り下げが発生したときにも正しく設定されます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>設定する値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分への参照 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a069f86c6224506eabeb4e51331cc68de"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ir::IRXTime::getMonth </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>月を取得します。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>現在の値 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af417a164662afb4d352713e662185881"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp; ir::IRXTime::setDay </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>日を設定します。 繰り上げや繰り下げが発生したときにも正しく設定されます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>設定する値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分への参照 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad1102d8b018726a6fa0cfbb11102c6ed"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ir::IRXTime::getDay </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>日を取得します。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>現在の値 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a785815459e759b34d595755b70e97683"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp; ir::IRXTime::setHour </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>時を設定します。 繰り上げや繰り下げが発生したときにも正しく設定されます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>設定する値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分への参照 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a45714ce7c3cd20247e6a9ff54e641cff"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ir::IRXTime::getHour </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>時を取得します。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>現在の値 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aae1f9ef8fe7cd353422fa489884bfdcc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp; ir::IRXTime::setMinute </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>分を設定します。 繰り上げや繰り下げが発生したときにも正しく設定されます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>設定する値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分への参照 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a75b7efdad7b4103cab7e2c736c38b80d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ir::IRXTime::getMinute </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>分を取得します。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>現在の値 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a78bd220296302e57b2ec33a0e483230a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp; ir::IRXTime::setSecond </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>秒を設定します。 繰り上げや繰り下げが発生したときにも正しく設定されます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>設定する値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分への参照 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a56f6e8eb99bd896fc40299cc814a604b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ir::IRXTime::getSecond </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>秒を取得します。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>現在の値 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa679727b972467ada1a1da7b5ffe14e8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#aadf174de1041f130599ff440f47b13d1">IRXTime::DayOfWeekEnum</a> ir::IRXTime::getDayOfWeek </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>曜日を取得します。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>現在の値 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac5a0d50fa2971d84b2eb44e6898e419f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp; ir::IRXTime::add </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/d14/classir_1_1_i_r_x_time_diff.html">IRXTimeDiff</a> const &amp;&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>時刻差を加算します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>加算する値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分への参照 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aeffe9c0405b8c307767fd1783c697af7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp; ir::IRXTime::addYear </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>年を加算します。 繰り上げや繰り下げが発生したときにも正しく設定されます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>加算する値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分への参照 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab9fb81ac82bb8b07620ea8926a0a251d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp; ir::IRXTime::addMonth </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>月を加算します。 繰り上げや繰り下げが発生したときにも正しく設定されます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>加算する値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分への参照 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3d23414f52493a387337f5098beea48f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp; ir::IRXTime::addDay </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>日を加算します。 繰り上げや繰り下げが発生したときにも正しく設定されます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>加算する値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分への参照 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acc373f24b58e35e0e9638a4caaf946ec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp; ir::IRXTime::addHour </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>時を加算します。 繰り上げや繰り下げが発生したときにも正しく設定されます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>加算する値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分への参照 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af973914de803bde6071ae468d5055ddc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp; ir::IRXTime::addMinute </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>分を加算します。 繰り上げや繰り下げが発生したときにも正しく設定されます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>加算する値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分への参照 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a629a57769351220aab34282f45d92008"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp; ir::IRXTime::addSecond </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>秒を加算します。 繰り上げや繰り下げが発生したときにも正しく設定されます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>加算する値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分への参照 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3f73208ddcc8d254fb9ec89fdd4f09d2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp; ir::IRXTime::sub </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/d14/classir_1_1_i_r_x_time_diff.html">IRXTimeDiff</a> const &amp;&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>時刻差を減算します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>減算する値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分への参照 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8d6c1a1422050c48d8e0458ffa7b8bee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp; ir::IRXTime::subYear </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>年を減算します。 繰り上げや繰り下げが発生したときにも正しく設定されます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>減算する値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分への参照 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a25fba5e25ac93c77e2dea768ae5effcb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp; ir::IRXTime::subMonth </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>月を減算します。 繰り上げや繰り下げが発生したときにも正しく設定されます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>減算する値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分への参照 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4efa28ed9ef2ce0b307b9c32ee851a90"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp; ir::IRXTime::subDay </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>日を減算します。 繰り上げや繰り下げが発生したときにも正しく設定されます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>減算する値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分への参照 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acb74ad6bf981d0c5cb1ad06edcb4211d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp; ir::IRXTime::subHour </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>時を減算します。 繰り上げや繰り下げが発生したときにも正しく設定されます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>減算する値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分への参照 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aef3044e92b4e866049e92c8b50d91456"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp; ir::IRXTime::subMinute </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>分を減算します。 繰り上げや繰り下げが発生したときにも正しく設定されます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>減算する値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分への参照 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="affcd00a51be6cbfb5cca56a23fcd122d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> &amp; ir::IRXTime::subSecond </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>秒を減算します。 繰り上げや繰り下げが発生したときにも正しく設定されます。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>減算する値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分への参照 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2f06ab3a307334033bcc616f47cde2c2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ir::IRXTime::equals </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> const &amp;&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>値を比較します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>比較する値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>比較結果 </dd></dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>同じ </td></tr>
+    <tr><td class="paramname">false</td><td>同じでない </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a40d573efd3026ee5c2545e463f185367"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ir::IRXTime::equalsDate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> const &amp;&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>日付部分を比較します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>比較する値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>比較結果 </dd></dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>同じ </td></tr>
+    <tr><td class="paramname">false</td><td>同じでない </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a72bf03262d77dbf9087dec65d8ae2710"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ir::IRXTime::equalsTime </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> const &amp;&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>時刻部分を比較します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>比較する値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>比較結果 </dd></dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>同じ </td></tr>
+    <tr><td class="paramname">false</td><td>同じでない </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a961dc22c59ff1a603562016da56be838"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ir::IRXTime::compare </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> const &amp;&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>値の大小を比較します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>比較する値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>比較結果 </dd></dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>同じ (this == param) </td></tr>
+    <tr><td class="paramname">&gt;0</td><td>大きい (this &gt; param) </td></tr>
+    <tr><td class="paramname">&lt;0</td><td>小さい (this &lt; param) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad5094089e1345c816ba1c13b80408210"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ir::IRXTime::compareDate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> const &amp;&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>日付部分の大小を比較します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>比較する値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>比較結果 </dd></dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>同じ (this == param) </td></tr>
+    <tr><td class="paramname">&gt;0</td><td>大きい (this &gt; param) </td></tr>
+    <tr><td class="paramname">&lt;0</td><td>小さい (this &lt; param) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a978a530a520e904eea5d547a86300b3a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ir::IRXTime::compareTime </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> const &amp;&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>時刻部分の大小を比較します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>比較する値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>比較結果 </dd></dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>同じ (this == param) </td></tr>
+    <tr><td class="paramname">&gt;0</td><td>大きい (this &gt; param) </td></tr>
+    <tr><td class="paramname">&lt;0</td><td>小さい (this &lt; param) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af80a89a5aa711bf04051a02a0667248f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/d14/classir_1_1_i_r_x_time_diff.html">IRXTimeDiff</a> ir::IRXTime::difference </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> const &amp;&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>引数に指定された時刻との時刻差を取得します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>減算する値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>時刻差 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae4a052b36db79c7fd5ca2aeca6aebf82"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9d">IRXTime::ErrorEnum</a> ir::IRXTime::parse </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>string</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>引数に指定された書式に従って文字列から値を設定します。</p>
+<p>使い方１：「年/月/日 (曜日) 時:分:秒」の書式に従って文字列から読み込む </p>
+<div class="fragment"><div class="line"><span class="keywordtype">string</span> str;</div>
+<div class="line"><a class="code" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af46cfb809b818f3ba1918a66ca1c9c51">IRXTime</a> time;</div>
+<div class="line"><a class="code" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9d">IRXTime::ErrorEnum</a> error;</div>
+<div class="line"></div>
+<div class="line">str = <span class="stringliteral">&quot;2012/11/07 (WED) 14:48:45&quot;</span>;</div>
+<div class="line">error = time.parse(<span class="stringliteral">&quot;%YYYY/%MM/%DD (%WEK) %hh:%mm:%ss&quot;</span>, str);</div>
+<div class="line"><span class="keywordflow">if</span> (error == <a class="code" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9da282a2ce9d670df222b87b622a88a38f7" title="エラーなし">IRXTime::ERROR_OK</a>) {</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;time = &quot;</span> &lt;&lt; time.format(<span class="stringliteral">&quot;%YYYY/%MM/%DD (%WEK) %hh:%mm:%ss&quot;</span>) &lt;&lt; endl;</div>
+<div class="line">}</div>
+<div class="line"><span class="keywordflow">else</span> {</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;error = &quot;</span> &lt;&lt; error &lt;&lt; endl;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> 使い方２：柔軟な文字列の読み込み </p>
+<div class="fragment"><div class="line"><span class="keywordtype">string</span> str;</div>
+<div class="line"><a class="code" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af46cfb809b818f3ba1918a66ca1c9c51">IRXTime</a> time;</div>
+<div class="line"><a class="code" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9d">IRXTime::ErrorEnum</a> error;</div>
+<div class="line"></div>
+<div class="line">str = <span class="stringliteral">&quot;today  is 2012/11/7    14:48:45 WED&quot;</span>;</div>
+<div class="line">error = time.parse(<span class="stringliteral">&quot;%***** is %YYYY/%M/%D %hh:%mm:%ss&quot;</span>, str);</div>
+<div class="line"><span class="keywordflow">if</span> (error == <a class="code" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9da282a2ce9d670df222b87b622a88a38f7" title="エラーなし">IRXTime::ERROR_OK</a>) {</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;time = &quot;</span> &lt;&lt; time.formatYMD() &lt;&lt; endl;</div>
+<div class="line">}</div>
+<div class="line"><span class="keywordflow">else</span> {</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;error = &quot;</span> &lt;&lt; error &lt;&lt; endl;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> 使い方３：時刻を表す文字列の変換 </p>
+<div class="fragment"><div class="line"><span class="keywordtype">string</span> str;</div>
+<div class="line"><a class="code" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af46cfb809b818f3ba1918a66ca1c9c51">IRXTime</a> time;</div>
+<div class="line"><a class="code" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9d">IRXTime::ErrorEnum</a> error;</div>
+<div class="line"></div>
+<div class="line">str = <span class="stringliteral">&quot;NOV 7/2012 (WED) - 14:48:45&quot;</span>;</div>
+<div class="line">error = time.parse(<span class="stringliteral">&quot;%MTH %D/%Y (%***) - %h:%m:%s&quot;</span>, str);</div>
+<div class="line"><span class="keywordflow">if</span> (error == <a class="code" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9da282a2ce9d670df222b87b622a88a38f7" title="エラーなし">IRXTime::ERROR_OK</a>) {</div>
+<div class="line">    str = time.format(<span class="stringliteral">&quot;%YYYY/%MM/%DD (%WEEK) %hh:%mm:%ss&quot;</span>);</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;time = &quot;</span> &lt;&lt; str &lt;&lt; endl;</div>
+<div class="line">}</div>
+<div class="line"><span class="keywordflow">else</span> {</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;error = &quot;</span> &lt;&lt; error &lt;&lt; endl;</div>
+<div class="line">}</div>
+</div><!-- fragment --> <dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">format</td><td>書式を表す文字列 <ul>
+<li>%YYYY : ４桁の年 (0000 ~ 9999) </li>
+<li>%YY : ２桁の年 (00 ~ 99) </li>
+<li>%Y : 年 (0 ~ 9999) </li>
+<li>%MONTH : 大文字の英語の月 (JANUARY ~ DECEMBER) </li>
+<li>%Month : 英語の月 (January ~ December) </li>
+<li>%month : 小文字の英語の月 (january ~ december) </li>
+<li>%MTH : 大文字の英語の月の略称 (JAN ~ DEC) </li>
+<li>%Mth : 英語の月の略称 (Jan ~ Dec) </li>
+<li>%mth : 小文字の英語の月の略称 (jan ~ dec) </li>
+<li>%MM : ２桁の月 (01 ~ 12) </li>
+<li>%M : 月 (1 ~ 12) </li>
+<li>%DDD : ３桁の日 (001 ~ 366) </li>
+<li>%DD : ２桁の日 (01 ~ 31) </li>
+<li>%D : 日 (1 ~ 31) </li>
+<li>%WEEK : 大文字の英語の曜日 (SUNDAY ~ SATURDAY) </li>
+<li>%Week : 英語の曜日 (Sunday ~ Saturday) </li>
+<li>%week : 小文字の英語の曜日 (sunday ~ saturday) </li>
+<li>%WEK : 大文字の英語の曜日の略称 (SUN ~ SAT) </li>
+<li>%Wek : 英語の曜日の略称 (Sun ~ Sat) </li>
+<li>%wek : 小文字の英語の曜日の略称 (sun ~ sat) </li>
+<li>%JY : 日本語の曜日 (日 ~ 土) </li>
+<li>%AN : 大文字の英語の午前午後 (AM, PM) </li>
+<li>%an : 小文字の英語の午前午後 (am, pm) </li>
+<li>%AD : 大文字の英語の午前午後 (A.M., P.M.) </li>
+<li>%ad : 小文字の英語の午前午後 (a.m., p.m.) </li>
+<li>%JG : 日本語の午前午後 (午前, 午後) </li>
+<li>%HH : ２桁の１２時間表記の時 (01 ~ 12) </li>
+<li>%H : １２時間表記の時 (1 ~ 12) </li>
+<li>%hh : ２桁の時 (00 ~ 23) </li>
+<li>%h : 時 (0 ~ 23) </li>
+<li>%mm : ２桁の分 (00 ~ 59) </li>
+<li>%m : 分 (0 ~ 59) </li>
+<li>%ss : ２桁の秒 (00 ~ 59) </li>
+<li>%s : 秒 (0 ~ 59) </li>
+<li>%p : POSIX 時刻 </li>
+<li>%&lt;space&gt; : % で始めた書式の終了 </li>
+<li>%% : % を読み込み </li>
+<li>%*(*...) : * の数だけ任意の文字を読み込み </li>
+<li>%&lt;その他&gt; : 何もしない (予約された書式) </li>
+<li>% 以外の文字 : 一致する文字を読み込み </li>
+</ul>
+</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">string</td><td>解析する文字列 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>エラー情報 </dd></dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9da282a2ce9d670df222b87b622a88a38f7" title="エラーなし">IRXTime::ERROR_OK</a></td><td>正常終了 </td></tr>
+    <tr><td class="paramname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9daba77c6fcd41b874931670b2099a526cc" title="書式が正しくない">IRXTime::ERROR_INVALID_FORMAT</a></td><td>フォーマットが不正 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aface81ff12931c38bf1541a83880add6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9d">IRXTime::ErrorEnum</a> ir::IRXTime::parseYMD </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>delimiter</em> = <code>'/'</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>YYYY/MM/DD 形式の書式に従って文字列から値を設定します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">string</td><td>解析する文字列 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">delimiter</td><td>日付の区切り文字 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>エラー情報 </dd></dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9da282a2ce9d670df222b87b622a88a38f7" title="エラーなし">IRXTime::ERROR_OK</a></td><td>正常終了 </td></tr>
+    <tr><td class="paramname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9daba77c6fcd41b874931670b2099a526cc" title="書式が正しくない">IRXTime::ERROR_INVALID_FORMAT</a></td><td>フォーマットが不正 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab68ec520dc7912b93d9e4051f342fd68"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9d">IRXTime::ErrorEnum</a> ir::IRXTime::parseMDY </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>delimiter</em> = <code>'/'</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>MM/DD/YYYY 形式の書式に従って文字列から値を設定します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">string</td><td>解析する文字列 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">delimiter</td><td>日付の区切り文字 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>エラー情報 </dd></dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9da282a2ce9d670df222b87b622a88a38f7" title="エラーなし">IRXTime::ERROR_OK</a></td><td>正常終了 </td></tr>
+    <tr><td class="paramname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9daba77c6fcd41b874931670b2099a526cc" title="書式が正しくない">IRXTime::ERROR_INVALID_FORMAT</a></td><td>フォーマットが不正 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a93db4cc88d452a4221201a717f018593"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9d">IRXTime::ErrorEnum</a> ir::IRXTime::parseDMY </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>delimiter</em> = <code>'/'</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>DD/MM/YYYY 形式の書式に従って文字列から値を設定します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">string</td><td>解析する文字列 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">delimiter</td><td>日付の区切り文字 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>エラー情報 </dd></dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9da282a2ce9d670df222b87b622a88a38f7" title="エラーなし">IRXTime::ERROR_OK</a></td><td>正常終了 </td></tr>
+    <tr><td class="paramname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9daba77c6fcd41b874931670b2099a526cc" title="書式が正しくない">IRXTime::ERROR_INVALID_FORMAT</a></td><td>フォーマットが不正 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a12ce84ddb5940fad18326d325a7bb8b0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9d">IRXTime::ErrorEnum</a> ir::IRXTime::parseISO8601 </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>extended</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ISO8601 (YYYYMMDDThhmmss, YYYY-MM-DDThh:mm:ss) 形式の書式に従って文字列から値を設定します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">string</td><td>解析する文字列 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">extended</td><td>日付の区切り文字を使用するかどうか </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>エラー情報 </dd></dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9da282a2ce9d670df222b87b622a88a38f7" title="エラーなし">IRXTime::ERROR_OK</a></td><td>正常終了 </td></tr>
+    <tr><td class="paramname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9daba77c6fcd41b874931670b2099a526cc" title="書式が正しくない">IRXTime::ERROR_INVALID_FORMAT</a></td><td>フォーマットが不正 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3b12f12869b8cb1ffcac5d6378c2a08f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ir::IRXTime::format </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>format</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>引数に指定された書式に従って値を文字列に変換します。</p>
+<p>使い方１：「年/月/日 (曜日) 時:分:秒」の書式に従って文字列を書き出す </p>
+<div class="fragment"><div class="line"><a class="code" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af46cfb809b818f3ba1918a66ca1c9c51">IRXTime</a> time;</div>
+<div class="line"><span class="keywordtype">string</span> str;</div>
+<div class="line"></div>
+<div class="line">time = <a class="code" href="../../d0/d8b/classir_1_1_i_r_x_time.html#a95c19d163f2d364e2126d14352e23a85">IRXTime::currentTime</a>();</div>
+<div class="line">str = time.format(<span class="stringliteral">&quot;%YYYY/%MM/%DD (%WEK) %hh:%mm:%ss&quot;</span>);</div>
+<div class="line">cout &lt;&lt; str &lt;&lt; endl;</div>
+</div><!-- fragment --><p> 使い方２：時刻を表す文字列の変換 </p>
+<div class="fragment"><div class="line"><span class="keywordtype">string</span> str;</div>
+<div class="line"><a class="code" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af46cfb809b818f3ba1918a66ca1c9c51">IRXTime</a> time;</div>
+<div class="line"><a class="code" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9d">IRXTime::ErrorEnum</a> error;</div>
+<div class="line"></div>
+<div class="line">str = <span class="stringliteral">&quot;NOV 7/2012 (WED) - 14:48:45&quot;</span>;</div>
+<div class="line">error = time.parse(<span class="stringliteral">&quot;%MTH %D/%Y (%***) - %h:%m:%s&quot;</span>, str);</div>
+<div class="line"><span class="keywordflow">if</span> (error == <a class="code" href="../../d0/d8b/classir_1_1_i_r_x_time.html#af2ab92e5c21afbabd2134f0f077dea9da282a2ce9d670df222b87b622a88a38f7" title="エラーなし">IRXTime::ERROR_OK</a>) {</div>
+<div class="line">    str = time.format(<span class="stringliteral">&quot;%YYYY/%MM/%DD (%WEEK) %hh:%mm:%ss&quot;</span>);</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;time = &quot;</span> &lt;&lt; str &lt;&lt; endl;</div>
+<div class="line">}</div>
+<div class="line"><span class="keywordflow">else</span> {</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;error = &quot;</span> &lt;&lt; error &lt;&lt; endl;</div>
+<div class="line">}</div>
+</div><!-- fragment --> <dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">format</td><td>書式を表す文字列 <ul>
+<li>%YYYY : ４桁の年 (0000 ~ 9999) </li>
+<li>%YY : ２桁の年 (00 ~ 99) </li>
+<li>%Y : 年 (0 ~ 9999) </li>
+<li>%MONTH : 大文字の英語の月 (JANUARY ~ DECEMBER) </li>
+<li>%Month : 英語の月 (January ~ December) </li>
+<li>%month : 小文字の英語の月 (january ~ december) </li>
+<li>%MTH : 大文字の英語の月の略称 (JAN ~ DEC) </li>
+<li>%Mth : 英語の月の略称 (Jan ~ Dec) </li>
+<li>%mth : 小文字の英語の月の略称 (jan ~ dec) </li>
+<li>%MM : ２桁の月 (01 ~ 12) </li>
+<li>%M : 月 (1 ~ 12) </li>
+<li>%DDD : ３桁の日 (001 ~ 366) </li>
+<li>%DD : ２桁の日 (01 ~ 31) </li>
+<li>%D : 日 (1 ~ 31) </li>
+<li>%WEEK : 大文字の英語の曜日 (SUNDAY ~ SATURDAY) </li>
+<li>%Week : 英語の曜日 (Sunday ~ Saturday) </li>
+<li>%week : 小文字の英語の曜日 (sunday ~ saturday) </li>
+<li>%WEK : 大文字の英語の曜日の略称 (SUN ~ SAT) </li>
+<li>%Wek : 英語の曜日の略称 (Sun ~ Sat) </li>
+<li>%wek : 小文字の英語の曜日の略称 (sun ~ sat) </li>
+<li>%JY : 日本語の曜日 (日 ~ 土) </li>
+<li>%AN : 大文字の英語の午前午後 (AM, PM) </li>
+<li>%an : 小文字の英語の午前午後 (am, pm) </li>
+<li>%AD : 大文字の英語の午前午後 (A.M., P.M.) </li>
+<li>%ad : 小文字の英語の午前午後 (a.m., p.m.) </li>
+<li>%JG : 日本語の午前午後 (午前, 午後) </li>
+<li>%HH : ２桁の１２時間表記の時 (01 ~ 12) </li>
+<li>%H : １２時間表記の時 (1 ~ 12) </li>
+<li>%hh : ２桁の時 (00 ~ 23) </li>
+<li>%h : 時 (0 ~ 23) </li>
+<li>%mm : ２桁の分 (00 ~ 59) </li>
+<li>%m : 分 (0 ~ 59) </li>
+<li>%ss : ２桁の秒 (00 ~ 59) </li>
+<li>%s : 秒 (0 ~ 59) </li>
+<li>%p : POSIX 時刻 </li>
+<li>%&lt;space&gt; : % で始めた書式の終了 </li>
+<li>%% : % を書き出し </li>
+<li>%* : * を書き出し </li>
+<li>%&lt;その他&gt; : 何もしない (予約された書式) </li>
+<li>% 以外の文字 : そのまま書き出し </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>結果の文字列 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4f2dc54f45681788c8d0c3272726031b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ir::IRXTime::formatYMD </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>delimiter</em> = <code>'/'</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>YYYY/MM/DD 形式の書式に従って値を文字列に変換します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">delimiter</td><td>日付の区切り文字 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>結果の文字列 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a351a5e18f586c080ef98e95305b23dfb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ir::IRXTime::formatMDY </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>delimiter</em> = <code>'/'</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>MM/DD/YYYY 形式の書式に従って値を文字列に変換します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">delimiter</td><td>日付の区切り文字 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>結果の文字列 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3e1a5d3c6ae5e18e32588ac268b7861a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ir::IRXTime::formatDMY </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>delimiter</em> = <code>'/'</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>DD/MM/YYYY 形式の書式に従って値を文字列に変換します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">delimiter</td><td>日付の区切り文字 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>結果の文字列 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7fb515c95138e1d6f694e2fa1722ac61"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ir::IRXTime::formatISO8601 </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>extended</em> = <code>false</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ISO8601 (YYYYMMDDThhmmss, YYYY-MM-DDThh:mm:ss) 形式の書式に従って値を文字列に変換します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">extended</td><td>日付の区切り文字を使用するかどうか </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>結果の文字列 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab5f35d825656f24accb1c6bff7d3f530"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">time_t ir::IRXTime::asTime_t </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>POSIX 時刻として値を取得します。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>POSIX 時刻 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a736dde52fc8179ce625562db57cffa5b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> ir::IRXTime::epochTime </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>基準時刻を取得します。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>基準時刻 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac963c7dad69a5e341693ac005f6454ba"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> ir::IRXTime::epochUTCTime </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>基準時刻を UTC 時間で取得します。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>基準時刻 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a95c19d163f2d364e2126d14352e23a85"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> ir::IRXTime::currentTime </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>現在時刻を取得します。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>現在時刻 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af6a91528c1570127194a6ab3bb21a45c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a> ir::IRXTime::currentUTCTime </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>現在時刻を UTC 時間で取得します。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>現在時刻 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>ir</b></li><li class="navelem"><a class="el" href="../../d0/d8b/classir_1_1_i_r_x_time.html">IRXTime</a></li>
+    <li class="footer">IridiumFrameworks / IRXTimeに対してSun Dec 30 2012 16:09:19に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
+</body>
+</html>

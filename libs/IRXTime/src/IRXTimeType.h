@@ -1,7 +1,7 @@
 /*
 **      IridiumFrameworks
 **
-**      Original Copyright (C) 2012 - 2012 HORIGUCHI Junshi.
+**      Original Copyright (C) 2012 - 2013 HORIGUCHI Junshi.
 **                                          http://iridium.jp/
 **                                          zap00365@nifty.com
 **      Portions Copyright (C) <year> <author>

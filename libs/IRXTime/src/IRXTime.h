@@ -1,7 +1,7 @@
 /*
 **      IridiumFrameworks
 **
-**      Original Copyright (C) 2012 - 2012 HORIGUCHI Junshi.
+**      Original Copyright (C) 2012 - 2013 HORIGUCHI Junshi.
 **                                          http://iridium.jp/
 **                                          zap00365@nifty.com
 **      Portions Copyright (C) <year> <author>
@@ -150,6 +150,17 @@ class IRXTime {
             //! 曜日定数の最大値
             DAYOFWEEK_LIMIT
         };
+        /*!
+            夏時間を表す定数です。
+         */
+        enum SummerTimeEnum {
+            //! 標準時間
+            SUMMERTIME_STANDARD,
+            //! 夏時間
+            SUMMERTIME_SUMMER,
+            //! 夏時間定数の最大値
+            SUMMERTIME_LIMIT
+        };
     private:
         enum SearchEnum {
             SEARCH_PERCENT,
@@ -160,6 +171,7 @@ class IRXTime {
             SEARCH_YOUBI,
             SEARCH_AMPM,
             SEARCH_GOZENGOGO,
+            SEARCH_SUMMER,
             SEARCH_LIMIT
         };
     
@@ -167,11 +179,12 @@ class IRXTime {
                 int                     _year;
                 int                     _month;
                 int                     _day;
+                int                     _days;
+                DayOfWeekEnum           _week;
                 int                     _hour;
                 int                     _minute;
                 int                     _second;
-                int                     _days;
-                DayOfWeekEnum           _week;
+                SummerTimeEnum          _summer;
     
     public:
         /*!
@@ -195,8 +208,9 @@ class IRXTime {
             @param [in] hour 時の初期値
             @param [in] minute 分の初期値
             @param [in] second 秒の初期値
+            @param [in] summer 夏時間かどうか
          */
-        explicit                        IRXTime                         (int year, int month, int day, int hour, int minute, int second);
+        explicit                        IRXTime                         (int year, int month, int day, int hour, int minute, int second, SummerTimeEnum summer = SUMMERTIME_LIMIT);
         /*!
             コンストラクタです。
             引数に指定した年・日・時・分・秒をもとにして初期値を設定します。
@@ -206,8 +220,9 @@ class IRXTime {
             @param [in] hour 時の初期値
             @param [in] minute 分の初期値
             @param [in] second 秒の初期値
+            @param [in] summer 夏時間かどうか
          */
-        explicit                        IRXTime                         (int year, int day, int hour, int minute, int second);
+        explicit                        IRXTime                         (int year, int day, int hour, int minute, int second, SummerTimeEnum summer = SUMMERTIME_LIMIT);
         /*!
             コンストラクタです。
             引数に指定した年・時・分・秒をもとにして初期値を設定します。
@@ -216,8 +231,9 @@ class IRXTime {
             @param [in] hour 時の初期値
             @param [in] minute 分の初期値
             @param [in] second 秒の初期値
+            @param [in] summer 夏時間かどうか
          */
-        explicit                        IRXTime                         (int year, int hour, int minute, int second);
+        explicit                        IRXTime                         (int year, int hour, int minute, int second, SummerTimeEnum summer = SUMMERTIME_LIMIT);
         /*!
             コンストラクタです。
             引数に指定した年・分・秒をもとにして初期値を設定します。
@@ -225,16 +241,18 @@ class IRXTime {
             @param [in] year 年の初期値
             @param [in] minute 分の初期値
             @param [in] second 秒の初期値
+            @param [in] summer 夏時間かどうか
          */
-        explicit                        IRXTime                         (int year, int minute, int second);
+        explicit                        IRXTime                         (int year, int minute, int second, SummerTimeEnum summer = SUMMERTIME_LIMIT);
         /*!
             コンストラクタです。
             引数に指定した年・秒をもとにして初期値を設定します。
             各桁で繰り上げや繰り下げが発生したときにも正しく設定されます。
             @param [in] year 年の初期値
             @param [in] second 秒の初期値
+            @param [in] summer 夏時間かどうか
          */
-        explicit                        IRXTime                         (int year, int second);
+        explicit                        IRXTime                         (int year, int second, SummerTimeEnum summer = SUMMERTIME_LIMIT);
         /*!
             コンストラクタです。
             引数に指定した POSIX 時刻をもとにして初期値を設定します。
@@ -292,9 +310,10 @@ class IRXTime {
             @param [in] hour 設定する時
             @param [in] minute 設定する分
             @param [in] second 設定する秒
+            @param [in] summer 夏時間かどうか
             @return 自分への参照
          */
-                IRXTime&                set                             (int year, int month, int day, int hour, int minute, int second);
+                IRXTime&                set                             (int year, int month, int day, int hour, int minute, int second, SummerTimeEnum summer = SUMMERTIME_LIMIT);
         /*!
             値を年・月・日・時・分・秒・曜日に分解して取得します。
             各桁を取得する必要がない場合にはそれぞれの引数に NULL を指定することができます。
@@ -316,12 +335,12 @@ class IRXTime {
             @param [out] second 現在の秒
                 @arg NULL : 秒を返さない
                 @arg その他
-            @param [out] week 現在の曜日
-                @arg NULL : 曜日を返さない
+            @param [out] summer 夏時間かどうか
+                @arg NULL : 値を返さない
                 @arg その他
             @return なし
          */
-                void                    get                             (int* year, int* month, int* day, int* hour, int* minute, int* second, DayOfWeekEnum* week = NULL) const;
+                void                    get                             (int* year, int* month, int* day, int* hour, int* minute, int* second, SummerTimeEnum* summer = NULL) const;
         /*!
             引数に指定した年・日・時・分・秒をもとにして値を設定します。
             各桁で繰り上げや繰り下げが発生したときにも正しく設定されます。
@@ -330,9 +349,10 @@ class IRXTime {
             @param [in] hour 設定する時
             @param [in] minute 設定する分
             @param [in] second 設定する秒
+            @param [in] summer 夏時間かどうか
             @return 自分への参照
          */
-                IRXTime&                set                             (int year, int day, int hour, int minute, int second);
+                IRXTime&                set                             (int year, int day, int hour, int minute, int second, SummerTimeEnum summer = SUMMERTIME_LIMIT);
         /*!
             値を年・日・時・分・秒・曜日に分解して取得します。
             各桁を取得する必要がない場合にはそれぞれの引数に NULL を指定することができます。
@@ -351,12 +371,12 @@ class IRXTime {
             @param [out] second 現在の秒
                 @arg NULL : 秒を返さない
                 @arg その他
-            @param [out] week 現在の曜日
-                @arg NULL : 曜日を返さない
+            @param [out] summer 夏時間かどうか
+                @arg NULL : 値を返さない
                 @arg その他
             @return なし
          */
-                void                    get                             (int* year, int* day, int* hour, int* minute, int* second, DayOfWeekEnum* week = NULL) const;
+                void                    get                             (int* year, int* day, int* hour, int* minute, int* second, SummerTimeEnum* summer = NULL) const;
         /*!
             引数に指定した年・時・分・秒をもとにして値を設定します。
             各桁で繰り上げや繰り下げが発生したときにも正しく設定されます。
@@ -364,9 +384,10 @@ class IRXTime {
             @param [in] hour 設定する時
             @param [in] minute 設定する分
             @param [in] second 設定する秒
+            @param [in] summer 夏時間かどうか
             @return 自分への参照
          */
-                IRXTime&                set                             (int year, int hour, int minute, int second);
+                IRXTime&                set                             (int year, int hour, int minute, int second, SummerTimeEnum summer = SUMMERTIME_LIMIT);
         /*!
             値を年・時・分・秒に分解して取得します。
             各桁を取得する必要がない場合にはそれぞれの引数に NULL を指定することができます。
@@ -382,18 +403,22 @@ class IRXTime {
             @param [out] second 現在の秒
                 @arg NULL : 秒を返さない
                 @arg その他
+            @param [out] summer 夏時間かどうか
+                @arg NULL : 値を返さない
+                @arg その他
             @return なし
          */
-                void                    get                             (int* year, int* hour, int* minute, int* second) const;
+                void                    get                             (int* year, int* hour, int* minute, int* second, SummerTimeEnum* summer = NULL) const;
         /*!
             引数に指定した年・分・秒をもとにして値を設定します。
             各桁で繰り上げや繰り下げが発生したときにも正しく設定されます。
             @param [in] year 設定する年
             @param [in] minute 設定する分
             @param [in] second 設定する秒
+            @param [in] summer 夏時間かどうか
             @return 自分への参照
          */
-                IRXTime&                set                             (int year, int minute, int second);
+                IRXTime&                set                             (int year, int minute, int second, SummerTimeEnum summer = SUMMERTIME_LIMIT);
         /*!
             値を年・分・秒に分解して取得します。
             各桁を取得する必要がない場合にはそれぞれの引数に NULL を指定することができます。
@@ -406,17 +431,21 @@ class IRXTime {
             @param [out] second 現在の秒
                 @arg NULL : 秒を返さない
                 @arg その他
+            @param [out] summer 夏時間かどうか
+                @arg NULL : 値を返さない
+                @arg その他
             @return なし
          */
-                void                    get                             (int* year, int* minute, int* second) const;
+                void                    get                             (int* year, int* minute, int* second, SummerTimeEnum* summer = NULL) const;
         /*!
             引数に指定した年・秒をもとにして値を設定します。
             各桁で繰り上げや繰り下げが発生したときにも正しく設定されます。
             @param [in] year 設定する年
             @param [in] second 設定する秒
+            @param [in] summer 夏時間かどうか
             @return 自分への参照
          */
-                IRXTime&                set                             (int year, int second);
+                IRXTime&                set                             (int year, int second, SummerTimeEnum summer = SUMMERTIME_LIMIT);
         /*!
             値を年・秒に分解して取得します。
             各桁を取得する必要がない場合にはそれぞれの引数に NULL を指定することができます。
@@ -426,9 +455,12 @@ class IRXTime {
             @param [out] second 現在の秒
                 @arg NULL : 秒を返さない
                 @arg その他
+            @param [out] summer 夏時間かどうか
+                @arg NULL : 値を返さない
+                @arg その他
             @return なし
          */
-                void                    get                             (int* year, int* second) const;
+                void                    get                             (int* year, int* second, SummerTimeEnum* summer = NULL) const;
         /*!
             引数に指定した POSIX 時刻をもとにして値を設定します。
             @param [in] param 設定する POSIX 時刻
@@ -463,12 +495,9 @@ class IRXTime {
             @param [out] day 現在の日
                 @arg NULL : 日を返さない
                 @arg その他
-            @param [out] week 現在の曜日
-                @arg NULL : 曜日を返さない
-                @arg その他
             @return なし
          */
-                void                    getDate                         (int* year, int* month, int* day, DayOfWeekEnum* week = NULL) const;
+                void                    getDate                         (int* year, int* month, int* day) const;
         /*!
             引数に指定した年・日をもとにして日付部分を設定します。
             各桁で繰り上げや繰り下げが発生したときにも正しく設定されます。
@@ -486,12 +515,9 @@ class IRXTime {
             @param [out] day 現在の日
                 @arg NULL : 日を返さない
                 @arg その他
-            @param [out] week 現在の曜日
-                @arg NULL : 曜日を返さない
-                @arg その他
             @return なし
          */
-                void                    getDate                         (int* year, int* day, DayOfWeekEnum* week = NULL) const;
+                void                    getDate                         (int* year, int* day) const;
         /*!
             時刻部分を設定します。
             繰り上げや繰り下げが発生したときにも正しく設定されます。
@@ -505,9 +531,10 @@ class IRXTime {
             @param [in] hour 設定する時
             @param [in] minute 設定する分
             @param [in] second 設定する秒
+            @param [in] summer 夏時間かどうか
             @return 自分への参照
          */
-                IRXTime&                setTime                         (int hour, int minute, int second);
+                IRXTime&                setTime                         (int hour, int minute, int second, SummerTimeEnum summer = SUMMERTIME_LIMIT);
         /*!
             時刻部分を時・分・秒に分解して取得します。
             各桁を取得する必要がない場合にはそれぞれの引数に NULL を指定することができます。
@@ -520,17 +547,21 @@ class IRXTime {
             @param [out] second 現在の秒
                 @arg NULL : 秒を返さない
                 @arg その他
+            @param [out] summer 夏時間かどうか
+                @arg NULL : 値を返さない
+                @arg その他
             @return 午前０時からの経過秒
          */
-                int                     getTime                         (int* hour, int* minute, int* second) const;
+                int                     getTime                         (int* hour, int* minute, int* second, SummerTimeEnum* summer = NULL) const;
         /*!
             引数に指定した分・秒をもとにして時刻部分を設定します。
             各桁で繰り上げや繰り下げが発生したときにも正しく設定されます。
             @param [in] minute 設定する分
             @param [in] second 設定する秒
+            @param [in] summer 夏時間かどうか
             @return 自分への参照
          */
-                IRXTime&                setTime                         (int minute, int second);
+                IRXTime&                setTime                         (int minute, int second, SummerTimeEnum summer = SUMMERTIME_LIMIT);
         /*!
             時刻部分を分・秒に分解して取得します。
             各桁を取得する必要がない場合にはそれぞれの引数に NULL を指定することができます。
@@ -540,25 +571,32 @@ class IRXTime {
             @param [out] second 現在の秒
                 @arg NULL : 秒を返さない
                 @arg その他
+            @param [out] summer 夏時間かどうか
+                @arg NULL : 値を返さない
+                @arg その他
             @return 午前０時からの経過秒
          */
-                int                     getTime                         (int* minute, int* second) const;
+                int                     getTime                         (int* minute, int* second, SummerTimeEnum* summer = NULL) const;
         /*!
             引数に指定した秒をもとにして時刻部分を設定します。
             繰り上げや繰り下げが発生したときにも正しく設定されます。
             @param [in] second 設定する秒
+            @param [in] summer 夏時間かどうか
             @return 自分への参照
          */
-                IRXTime&                setTime                         (int second);
+                IRXTime&                setTime                         (int second, SummerTimeEnum summer = SUMMERTIME_LIMIT);
         /*!
             時刻部分を秒に分解して取得します。
             取得する必要がない場合には引数に NULL を指定することができます。
             @param [out] second 現在の秒
                 @arg NULL : 秒を返さない
                 @arg その他
+            @param [out] summer 夏時間かどうか
+                @arg NULL : 値を返さない
+                @arg その他
             @return 午前０時からの経過秒
          */
-                int                     getTime                         (int* second) const;
+                int                     getTime                         (int* second, SummerTimeEnum* summer = NULL) const;
         /*!
             年を設定します。
             繰り上げや繰り下げが発生したときにも正しく設定されます。
@@ -596,6 +634,11 @@ class IRXTime {
          */
                 int                     getDay                          (void) const;
         /*!
+            曜日を取得します。
+            @return 現在の値
+         */
+                DayOfWeekEnum           getDayOfWeek                    (void) const;
+        /*!
             時を設定します。
             繰り上げや繰り下げが発生したときにも正しく設定されます。
             @param [in] param 設定する値
@@ -632,10 +675,16 @@ class IRXTime {
          */
                 int                     getSecond                       (void) const;
         /*!
-            曜日を取得します。
+            夏時間かどうかを設定します。
+            @param [in] param 設定する値
+            @return 自分への参照
+         */
+                IRXTime&                setSummerTime                   (SummerTimeEnum param);
+        /*!
+            夏時間かどうかを取得します。
             @return 現在の値
          */
-                DayOfWeekEnum           getDayOfWeek                    (void) const;
+                SummerTimeEnum          getSummerTime                   (void) const;
         /*!
             時刻差を加算します。
             @param [in] param 加算する値
@@ -873,6 +922,7 @@ class IRXTime {
                 @arg @%m : 分 (0 ~ 59)
                 @arg @%ss : ２桁の秒 (00 ~ 59)
                 @arg @%s : 秒 (0 ~ 59)
+                @arg @%S : 夏時間かどうか ('-' = 標準時間, '+' = 夏時間)
                 @arg @%p : POSIX 時刻
                 @arg @%@<space@> : % で始めた書式の終了
                 @arg @%@% : % を読み込み
@@ -984,6 +1034,7 @@ class IRXTime {
                 @arg @%m : 分 (0 ~ 59)
                 @arg @%ss : ２桁の秒 (00 ~ 59)
                 @arg @%s : 秒 (0 ~ 59)
+                @arg @%S : 夏時間かどうか ('-' = 標準時間, '+' = 夏時間)
                 @arg @%p : POSIX 時刻
                 @arg @%@<space@> : % で始めた書式の終了
                 @arg @%@% : % を書き出し
@@ -1043,7 +1094,7 @@ class IRXTime {
          */
         static  IRXTime                 currentUTCTime                  (void);
     private:
-                ErrorEnum               from                            (int year, int month, int day, int hour, int minute, int second, bool truncate);
+                ErrorEnum               from                            (int year, int month, int day, int hour, int minute, int second, SummerTimeEnum summer, bool truncate);
                 ErrorEnum               from                            (time_t utc, bool local);
                 time_t                  to                              (void) const;
         static  SearchEnum              search                          (std::string const& string, int* index, char* key);
@@ -1145,29 +1196,34 @@ extern  bool                            operator>=                      (IRXTime
     set(param);
 }
 
-/*public */inline IRXTime::IRXTime(int year, int month, int day, int hour, int minute, int second)
+/*public */inline IRXTime::IRXTime(int year, int month, int day, int hour, int minute, int second, SummerTimeEnum summer)
 {
-    set(year, month, day, hour, minute, second);
+    _summer = SUMMERTIME_STANDARD;
+    set(year, month, day, hour, minute, second, summer);
 }
 
-/*public */inline IRXTime::IRXTime(int year, int day, int hour, int minute, int second)
+/*public */inline IRXTime::IRXTime(int year, int day, int hour, int minute, int second, SummerTimeEnum summer)
 {
-    set(year, day, hour, minute, second);
+    _summer = SUMMERTIME_STANDARD;
+    set(year, day, hour, minute, second, summer);
 }
 
-/*public */inline IRXTime::IRXTime(int year, int hour, int minute, int second)
+/*public */inline IRXTime::IRXTime(int year, int hour, int minute, int second, SummerTimeEnum summer)
 {
-    set(year, hour, minute, second);
+    _summer = SUMMERTIME_STANDARD;
+    set(year, hour, minute, second, summer);
 }
 
-/*public */inline IRXTime::IRXTime(int year, int minute, int second)
+/*public */inline IRXTime::IRXTime(int year, int minute, int second, SummerTimeEnum summer)
 {
-    set(year, minute, second);
+    _summer = SUMMERTIME_STANDARD;
+    set(year, minute, second, summer);
 }
 
-/*public */inline IRXTime::IRXTime(int year, int second)
+/*public */inline IRXTime::IRXTime(int year, int second, SummerTimeEnum summer)
 {
-    set(year, second);
+    _summer = SUMMERTIME_STANDARD;
+    set(year, second, summer);
 }
 
 /*public */inline IRXTime::IRXTime(time_t param)
@@ -1209,6 +1265,11 @@ extern  bool                            operator>=                      (IRXTime
     return _day;
 }
 
+/*public */inline IRXTime::DayOfWeekEnum IRXTime::getDayOfWeek(void) const
+{
+    return _week;
+}
+
 /*public */inline int IRXTime::getHour(void) const
 {
     return _hour;
@@ -1224,9 +1285,9 @@ extern  bool                            operator>=                      (IRXTime
     return _second;
 }
 
-/*public */inline IRXTime::DayOfWeekEnum IRXTime::getDayOfWeek(void) const
+/*public */inline IRXTime::SummerTimeEnum IRXTime::getSummerTime(void) const
 {
-    return _week;
+    return _summer;
 }
 
 /*public */inline time_t IRXTime::asTime_t(void) const

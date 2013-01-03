@@ -1,7 +1,7 @@
 /*
 **      IridiumFrameworks
 **
-**      Original Copyright (C) 2012 - 2012 HORIGUCHI Junshi.
+**      Original Copyright (C) 2012 - 2013 HORIGUCHI Junshi.
 **                                          http://iridium.jp/
 **                                          zap00365@nifty.com
 **      Portions Copyright (C) <year> <author>
@@ -88,6 +88,9 @@ static  char const              irxtime_ampm[][3][5] = {
 static  char const              irxtime_gozengogo[][3][7] = {
     {"JG", "午前", "午後"}
 };
+static  char const              irxtime_summer[][3][2] = {
+    {"S", "-", "+"}
+};
 static  char const              irxtime_formatint[][5] = {
     "%d", "%01d", "%02d", "%03d", "%04d"
 };
@@ -131,21 +134,22 @@ static  char const              irxtime_formatlong[][6] = {
     _year = param._year;
     _month = param._month;
     _day = param._day;
+    _days = param._days;
+    _week = param._week;
     _hour = param._hour;
     _minute = param._minute;
     _second = param._second;
-    _days = param._days;
-    _week = param._week;
+    _summer = param._summer;
     return *this;
 }
 
-/*public */IRXTime& IRXTime::set(int year, int month, int day, int hour, int minute, int second)
+/*public */IRXTime& IRXTime::set(int year, int month, int day, int hour, int minute, int second, SummerTimeEnum summer)
 {
-    from(year, month, day, hour, minute, second, false);
+    from(year, month, day, hour, minute, second, (summer != SUMMERTIME_LIMIT) ? (summer) : (_summer), false);
     return *this;
 }
 
-/*public */void IRXTime::get(int* year, int* month, int* day, int* hour, int* minute, int* second, DayOfWeekEnum* week) const
+/*public */void IRXTime::get(int* year, int* month, int* day, int* hour, int* minute, int* second, SummerTimeEnum* summer) const
 {
     if (year != NULL) {
         *year = _year;
@@ -165,19 +169,19 @@ static  char const              irxtime_formatlong[][6] = {
     if (second != NULL) {
         *second = _second;
     }
-    if (week != NULL) {
-        *week = _week;
+    if (summer != NULL) {
+        *summer = _summer;
     }
     return;
 }
 
-/*public */IRXTime& IRXTime::set(int year, int day, int hour, int minute, int second)
+/*public */IRXTime& IRXTime::set(int year, int day, int hour, int minute, int second, SummerTimeEnum summer)
 {
-    from(year, 1, day, hour, minute, second, false);
+    from(year, 1, day, hour, minute, second, (summer != SUMMERTIME_LIMIT) ? (summer) : (_summer), false);
     return *this;
 }
 
-/*public */void IRXTime::get(int* year, int* day, int* hour, int* minute, int* second, DayOfWeekEnum* week) const
+/*public */void IRXTime::get(int* year, int* day, int* hour, int* minute, int* second, SummerTimeEnum* summer) const
 {
     if (year != NULL) {
         *year = _year;
@@ -194,19 +198,19 @@ static  char const              irxtime_formatlong[][6] = {
     if (second != NULL) {
         *second = _second;
     }
-    if (week != NULL) {
-        *week = _week;
+    if (summer != NULL) {
+        *summer = _summer;
     }
     return;
 }
 
-/*public */IRXTime& IRXTime::set(int year, int hour, int minute, int second)
+/*public */IRXTime& IRXTime::set(int year, int hour, int minute, int second, SummerTimeEnum summer)
 {
-    from(year, 1, 1, hour, minute, second, false);
+    from(year, 1, 1, hour, minute, second, (summer != SUMMERTIME_LIMIT) ? (summer) : (_summer), false);
     return *this;
 }
 
-/*public */void IRXTime::get(int* year, int* hour, int* minute, int* second) const
+/*public */void IRXTime::get(int* year, int* hour, int* minute, int* second, SummerTimeEnum* summer) const
 {
     if (year != NULL) {
         *year = _year;
@@ -220,16 +224,19 @@ static  char const              irxtime_formatlong[][6] = {
     if (second != NULL) {
         *second = _second;
     }
+    if (summer != NULL) {
+        *summer = _summer;
+    }
     return;
 }
 
-/*public */IRXTime& IRXTime::set(int year, int minute, int second)
+/*public */IRXTime& IRXTime::set(int year, int minute, int second, SummerTimeEnum summer)
 {
-    from(year, 1, 1, 0, minute, second, false);
+    from(year, 1, 1, 0, minute, second, (summer != SUMMERTIME_LIMIT) ? (summer) : (_summer), false);
     return *this;
 }
 
-/*public */void IRXTime::get(int* year, int* minute, int* second) const
+/*public */void IRXTime::get(int* year, int* minute, int* second, SummerTimeEnum* summer) const
 {
     if (year != NULL) {
         *year = _year;
@@ -240,22 +247,28 @@ static  char const              irxtime_formatlong[][6] = {
     if (second != NULL) {
         *second = _second;
     }
+    if (summer != NULL) {
+        *summer = _summer;
+    }
     return;
 }
 
-/*public */IRXTime& IRXTime::set(int year, int second)
+/*public */IRXTime& IRXTime::set(int year, int second, SummerTimeEnum summer)
 {
-    from(year, 1, 1, 0, 0, second, false);
+    from(year, 1, 1, 0, 0, second, (summer != SUMMERTIME_LIMIT) ? (summer) : (_summer), false);
     return *this;
 }
 
-/*public */void IRXTime::get(int* year, int* second) const
+/*public */void IRXTime::get(int* year, int* second, SummerTimeEnum* summer) const
 {
     if (year != NULL) {
         *year = _year;
     }
     if (second != NULL) {
         *second = 86400 * (_days - 1) + 3600 * _hour + 60 * _minute + _second;
+    }
+    if (summer != NULL) {
+        *summer = _summer;
     }
     return;
 }
@@ -268,17 +281,17 @@ static  char const              irxtime_formatlong[][6] = {
 
 /*public */IRXTime& IRXTime::setDate(IRXTime const& param)
 {
-    from(param._year, param._month, param._day, _hour, _minute, _second, false);
+    from(param._year, param._month, param._day, _hour, _minute, _second, _summer, false);
     return *this;
 }
 
 /*public */IRXTime& IRXTime::setDate(int year, int month, int day)
 {
-    from(year, month, day, _hour, _minute, _second, false);
+    from(year, month, day, _hour, _minute, _second, _summer, false);
     return *this;
 }
 
-/*public */void IRXTime::getDate(int* year, int* month, int* day, DayOfWeekEnum* week) const
+/*public */void IRXTime::getDate(int* year, int* month, int* day) const
 {
     if (year != NULL) {
         *year = _year;
@@ -289,19 +302,16 @@ static  char const              irxtime_formatlong[][6] = {
     if (day != NULL) {
         *day = _day;
     }
-    if (week != NULL) {
-        *week = _week;
-    }
     return;
 }
 
 /*public */IRXTime& IRXTime::setDate(int year, int day)
 {
-    from(year, 1, day, _hour, _minute, _second, false);
+    from(year, 1, day, _hour, _minute, _second, _summer, false);
     return *this;
 }
 
-/*public */void IRXTime::getDate(int* year, int* day, DayOfWeekEnum* week) const
+/*public */void IRXTime::getDate(int* year, int* day) const
 {
     if (year != NULL) {
         *year = _year;
@@ -309,25 +319,22 @@ static  char const              irxtime_formatlong[][6] = {
     if (day != NULL) {
         *day = _days;
     }
-    if (week != NULL) {
-        *week = _week;
-    }
     return;
 }
 
 /*public */IRXTime& IRXTime::setTime(IRXTime const& param)
 {
-    from(_year, _month, _day, param._hour, param._minute, param._second, false);
+    from(_year, _month, _day, param._hour, param._minute, param._second, param._summer, false);
     return *this;
 }
 
-/*public */IRXTime& IRXTime::setTime(int hour, int minute, int second)
+/*public */IRXTime& IRXTime::setTime(int hour, int minute, int second, SummerTimeEnum summer)
 {
-    from(_year, _month, _day, hour, minute, second, false);
+    from(_year, _month, _day, hour, minute, second, (summer != SUMMERTIME_LIMIT) ? (summer) : (_summer), false);
     return *this;
 }
 
-/*public */int IRXTime::getTime(int* hour, int* minute, int* second) const
+/*public */int IRXTime::getTime(int* hour, int* minute, int* second, SummerTimeEnum* summer) const
 {
     int result(0);
     
@@ -341,16 +348,19 @@ static  char const              irxtime_formatlong[][6] = {
     if (second != NULL) {
         *second = _second;
     }
+    if (summer != NULL) {
+        *summer = _summer;
+    }
     return result;
 }
 
-/*public */IRXTime& IRXTime::setTime(int minute, int second)
+/*public */IRXTime& IRXTime::setTime(int minute, int second, SummerTimeEnum summer)
 {
-    from(_year, _month, _day, 0, minute, second, false);
+    from(_year, _month, _day, 0, minute, second, (summer != SUMMERTIME_LIMIT) ? (summer) : (_summer), false);
     return *this;
 }
 
-/*public */int IRXTime::getTime(int* minute, int* second) const
+/*public */int IRXTime::getTime(int* minute, int* second, SummerTimeEnum* summer) const
 {
     int result(0);
     
@@ -361,16 +371,19 @@ static  char const              irxtime_formatlong[][6] = {
     if (second != NULL) {
         *second = _second;
     }
+    if (summer != NULL) {
+        *summer = _summer;
+    }
     return result;
 }
 
-/*public */IRXTime& IRXTime::setTime(int second)
+/*public */IRXTime& IRXTime::setTime(int second, SummerTimeEnum summer)
 {
-    from(_year, _month, _day, 0, 0, second, false);
+    from(_year, _month, _day, 0, 0, second, (summer != SUMMERTIME_LIMIT) ? (summer) : (_summer), false);
     return *this;
 }
 
-/*public */int IRXTime::getTime(int* second) const
+/*public */int IRXTime::getTime(int* second, SummerTimeEnum* summer) const
 {
     int result(0);
     
@@ -378,65 +391,74 @@ static  char const              irxtime_formatlong[][6] = {
     if (second != NULL) {
         *second = result;
     }
+    if (summer != NULL) {
+        *summer = _summer;
+    }
     return result;
 }
 
 /*public */IRXTime& IRXTime::setYear(int param)
 {
-    from(param, _month, _day, _hour, _minute, _second, true);
+    from(param, _month, _day, _hour, _minute, _second, _summer, true);
     return *this;
 }
 
 /*public */IRXTime& IRXTime::setMonth(int param)
 {
-    from(_year, param, _day, _hour, _minute, _second, true);
+    from(_year, param, _day, _hour, _minute, _second, _summer, true);
     return *this;
 }
 
 /*public */IRXTime& IRXTime::setDay(int param)
 {
-    from(_year, _month, param, _hour, _minute, _second, false);
+    from(_year, _month, param, _hour, _minute, _second, _summer, false);
     return *this;
 }
 
 /*public */IRXTime& IRXTime::setHour(int param)
 {
-    from(_year, _month, _day, param, _minute, _second, false);
+    from(_year, _month, _day, param, _minute, _second, _summer, false);
     return *this;
 }
 
 /*public */IRXTime& IRXTime::setMinute(int param)
 {
-    from(_year, _month, _day, _hour, param, _second, false);
+    from(_year, _month, _day, _hour, param, _second, _summer, false);
     return *this;
 }
 
 /*public */IRXTime& IRXTime::setSecond(int param)
 {
-    from(_year, _month, _day, _hour, _minute, param, false);
+    from(_year, _month, _day, _hour, _minute, param, _summer, false);
+    return *this;
+}
+
+/*public */IRXTime& IRXTime::setSummerTime(SummerTimeEnum param)
+{
+    from(_year, _month, _day, _hour, _minute, _second, (param != SUMMERTIME_LIMIT) ? (param) : (_summer), false);
     return *this;
 }
 
 /*public */IRXTime& IRXTime::add(IRXTimeDiff const& param)
 {
+    long long limit;
+    long long temp;
     long day;
-    long limit;
-    long temp;
     int hour;
     int minute;
     int second;
     
     param.get(&day, &hour, &minute, &second);
-    from(_year, _month, _day, _hour + hour, _minute + minute, _second + second, false);
+    from(_year, _month, _day, _hour + hour, _minute + minute, _second + second, _summer, false);
     while (day != 0) {
         limit = day;
-        if (limit < (temp = static_cast<long>(INT_MIN) - _day)) {
+        if (limit < (temp = static_cast<long long>(INT_MIN) - _day)) {
             limit = temp;
         }
-        if (limit > (temp = static_cast<long>(INT_MAX) - _day)) {
+        if (limit > (temp = static_cast<long long>(INT_MAX) - _day)) {
             limit = temp;
         }
-        from(_year, _month, static_cast<int>(_day + limit), _hour, _minute, _second, false);
+        from(_year, _month, static_cast<int>(_day + limit), _hour, _minute, _second, _summer, false);
         day -= limit;
     }
     return *this;
@@ -444,18 +466,18 @@ static  char const              irxtime_formatlong[][6] = {
 
 /*public */IRXTime& IRXTime::addYear(int param)
 {
-    long limit;
-    long temp;
+    long long limit;
+    long long temp;
     
     while (param != 0) {
         limit = param;
-        if (limit < (temp = static_cast<long>(INT_MIN) - _year)) {
+        if (limit < (temp = static_cast<long long>(INT_MIN) - _year)) {
             limit = temp;
         }
-        if (limit > (temp = static_cast<long>(INT_MAX) - _year)) {
+        if (limit > (temp = static_cast<long long>(INT_MAX) - _year)) {
             limit = temp;
         }
-        from(static_cast<int>(_year + limit), _month, _day, _hour, _minute, _second, true);
+        from(static_cast<int>(_year + limit), _month, _day, _hour, _minute, _second, _summer, true);
         param -= limit;
     }
     return *this;
@@ -463,18 +485,18 @@ static  char const              irxtime_formatlong[][6] = {
 
 /*public */IRXTime& IRXTime::addMonth(int param)
 {
-    long limit;
-    long temp;
+    long long limit;
+    long long temp;
     
     while (param != 0) {
         limit = param;
-        if (limit < (temp = static_cast<long>(INT_MIN) - _month)) {
+        if (limit < (temp = static_cast<long long>(INT_MIN) - _month)) {
             limit = temp;
         }
-        if (limit > (temp = static_cast<long>(INT_MAX) - _month)) {
+        if (limit > (temp = static_cast<long long>(INT_MAX) - _month)) {
             limit = temp;
         }
-        from(_year, static_cast<int>(_month + limit), _day, _hour, _minute, _second, true);
+        from(_year, static_cast<int>(_month + limit), _day, _hour, _minute, _second, _summer, true);
         param -= limit;
     }
     return *this;
@@ -482,18 +504,18 @@ static  char const              irxtime_formatlong[][6] = {
 
 /*public */IRXTime& IRXTime::addDay(int param)
 {
-    long limit;
-    long temp;
+    long long limit;
+    long long temp;
     
     while (param != 0) {
         limit = param;
-        if (limit < (temp = static_cast<long>(INT_MIN) - _day)) {
+        if (limit < (temp = static_cast<long long>(INT_MIN) - _day)) {
             limit = temp;
         }
-        if (limit > (temp = static_cast<long>(INT_MAX) - _day)) {
+        if (limit > (temp = static_cast<long long>(INT_MAX) - _day)) {
             limit = temp;
         }
-        from(_year, _month, static_cast<int>(_day + limit), _hour, _minute, _second, false);
+        from(_year, _month, static_cast<int>(_day + limit), _hour, _minute, _second, _summer, false);
         param -= limit;
     }
     return *this;
@@ -501,18 +523,18 @@ static  char const              irxtime_formatlong[][6] = {
 
 /*public */IRXTime& IRXTime::addHour(int param)
 {
-    long limit;
-    long temp;
+    long long limit;
+    long long temp;
     
     while (param != 0) {
         limit = param;
-        if (limit < (temp = static_cast<long>(INT_MIN) - _hour)) {
+        if (limit < (temp = static_cast<long long>(INT_MIN) - _hour)) {
             limit = temp;
         }
-        if (limit > (temp = static_cast<long>(INT_MAX) - _hour)) {
+        if (limit > (temp = static_cast<long long>(INT_MAX) - _hour)) {
             limit = temp;
         }
-        from(_year, _month, _day, static_cast<int>(_hour + limit), _minute, _second, false);
+        from(_year, _month, _day, static_cast<int>(_hour + limit), _minute, _second, _summer, false);
         param -= limit;
     }
     return *this;
@@ -520,18 +542,18 @@ static  char const              irxtime_formatlong[][6] = {
 
 /*public */IRXTime& IRXTime::addMinute(int param)
 {
-    long limit;
-    long temp;
+    long long limit;
+    long long temp;
     
     while (param != 0) {
         limit = param;
-        if (limit < (temp = static_cast<long>(INT_MIN) - _minute)) {
+        if (limit < (temp = static_cast<long long>(INT_MIN) - _minute)) {
             limit = temp;
         }
-        if (limit > (temp = static_cast<long>(INT_MAX) - _minute)) {
+        if (limit > (temp = static_cast<long long>(INT_MAX) - _minute)) {
             limit = temp;
         }
-        from(_year, _month, _day, _hour, static_cast<int>(_minute + limit), _second, false);
+        from(_year, _month, _day, _hour, static_cast<int>(_minute + limit), _second, _summer, false);
         param -= limit;
     }
     return *this;
@@ -539,18 +561,18 @@ static  char const              irxtime_formatlong[][6] = {
 
 /*public */IRXTime& IRXTime::addSecond(int param)
 {
-    long limit;
-    long temp;
+    long long limit;
+    long long temp;
     
     while (param != 0) {
         limit = param;
-        if (limit < (temp = static_cast<long>(INT_MIN) - _second)) {
+        if (limit < (temp = static_cast<long long>(INT_MIN) - _second)) {
             limit = temp;
         }
-        if (limit > (temp = static_cast<long>(INT_MAX) - _second)) {
+        if (limit > (temp = static_cast<long long>(INT_MAX) - _second)) {
             limit = temp;
         }
-        from(_year, _month, _day, _hour, _minute, static_cast<int>(_second + limit), false);
+        from(_year, _month, _day, _hour, _minute, static_cast<int>(_second + limit), _summer, false);
         param -= limit;
     }
     return *this;
@@ -558,24 +580,24 @@ static  char const              irxtime_formatlong[][6] = {
 
 /*public */IRXTime& IRXTime::sub(IRXTimeDiff const& param)
 {
+    long long limit;
+    long long temp;
     long day;
-    long limit;
-    long temp;
     int hour;
     int minute;
     int second;
     
     param.get(&day, &hour, &minute, &second);
-    from(_year, _month, _day, _hour - hour, _minute - minute, _second - second, false);
+    from(_year, _month, _day, _hour - hour, _minute - minute, _second - second, _summer, false);
     while (day != 0) {
         limit = day;
-        if (limit < (temp = _day - static_cast<long>(INT_MAX))) {
+        if (limit < (temp = _day - static_cast<long long>(INT_MAX))) {
             limit = temp;
         }
-        if (limit > (temp = _day - static_cast<long>(INT_MIN))) {
+        if (limit > (temp = _day - static_cast<long long>(INT_MIN))) {
             limit = temp;
         }
-        from(_year, _month, static_cast<int>(_day - limit), _hour, _minute, _second, false);
+        from(_year, _month, static_cast<int>(_day - limit), _hour, _minute, _second, _summer, false);
         day -= limit;
     }
     return *this;
@@ -583,18 +605,18 @@ static  char const              irxtime_formatlong[][6] = {
 
 /*public */IRXTime& IRXTime::subYear(int param)
 {
-    long limit;
-    long temp;
+    long long limit;
+    long long temp;
     
     while (param != 0) {
         limit = param;
-        if (limit < (temp = _year - static_cast<long>(INT_MAX))) {
+        if (limit < (temp = _year - static_cast<long long>(INT_MAX))) {
             limit = temp;
         }
-        if (limit > (temp = _year - static_cast<long>(INT_MIN))) {
+        if (limit > (temp = _year - static_cast<long long>(INT_MIN))) {
             limit = temp;
         }
-        from(static_cast<int>(_year - limit), _month, _day, _hour, _minute, _second, true);
+        from(static_cast<int>(_year - limit), _month, _day, _hour, _minute, _second, _summer, true);
         param -= limit;
     }
     return *this;
@@ -602,18 +624,18 @@ static  char const              irxtime_formatlong[][6] = {
 
 /*public */IRXTime& IRXTime::subMonth(int param)
 {
-    long limit;
-    long temp;
+    long long limit;
+    long long temp;
     
     while (param != 0) {
         limit = param;
-        if (limit < (temp = _month - static_cast<long>(INT_MAX))) {
+        if (limit < (temp = _month - static_cast<long long>(INT_MAX))) {
             limit = temp;
         }
-        if (limit > (temp = _month - static_cast<long>(INT_MIN))) {
+        if (limit > (temp = _month - static_cast<long long>(INT_MIN))) {
             limit = temp;
         }
-        from(_year, static_cast<int>(_month - limit), _day, _hour, _minute, _second, true);
+        from(_year, static_cast<int>(_month - limit), _day, _hour, _minute, _second, _summer, true);
         param -= limit;
     }
     return *this;
@@ -621,18 +643,18 @@ static  char const              irxtime_formatlong[][6] = {
 
 /*public */IRXTime& IRXTime::subDay(int param)
 {
-    long limit;
-    long temp;
+    long long limit;
+    long long temp;
     
     while (param != 0) {
         limit = param;
-        if (limit < (temp = _day - static_cast<long>(INT_MAX))) {
+        if (limit < (temp = _day - static_cast<long long>(INT_MAX))) {
             limit = temp;
         }
-        if (limit > (temp = _day - static_cast<long>(INT_MIN))) {
+        if (limit > (temp = _day - static_cast<long long>(INT_MIN))) {
             limit = temp;
         }
-        from(_year, _month, static_cast<int>(_day - limit), _hour, _minute, _second, false);
+        from(_year, _month, static_cast<int>(_day - limit), _hour, _minute, _second, _summer, false);
         param -= limit;
     }
     return *this;
@@ -640,18 +662,18 @@ static  char const              irxtime_formatlong[][6] = {
 
 /*public */IRXTime& IRXTime::subHour(int param)
 {
-    long limit;
-    long temp;
+    long long limit;
+    long long temp;
     
     while (param != 0) {
         limit = param;
-        if (limit < (temp = _hour - static_cast<long>(INT_MAX))) {
+        if (limit < (temp = _hour - static_cast<long long>(INT_MAX))) {
             limit = temp;
         }
-        if (limit > (temp = _hour - static_cast<long>(INT_MIN))) {
+        if (limit > (temp = _hour - static_cast<long long>(INT_MIN))) {
             limit = temp;
         }
-        from(_year, _month, _day, static_cast<int>(_hour - limit), _minute, _second, false);
+        from(_year, _month, _day, static_cast<int>(_hour - limit), _minute, _second, _summer, false);
         param -= limit;
     }
     return *this;
@@ -659,18 +681,18 @@ static  char const              irxtime_formatlong[][6] = {
 
 /*public */IRXTime& IRXTime::subMinute(int param)
 {
-    long limit;
-    long temp;
+    long long limit;
+    long long temp;
     
     while (param != 0) {
         limit = param;
-        if (limit < (temp = _minute - static_cast<long>(INT_MAX))) {
+        if (limit < (temp = _minute - static_cast<long long>(INT_MAX))) {
             limit = temp;
         }
-        if (limit > (temp = _minute - static_cast<long>(INT_MIN))) {
+        if (limit > (temp = _minute - static_cast<long long>(INT_MIN))) {
             limit = temp;
         }
-        from(_year, _month, _day, _hour, static_cast<int>(_minute - limit), _second, false);
+        from(_year, _month, _day, _hour, static_cast<int>(_minute - limit), _second, _summer, false);
         param -= limit;
     }
     return *this;
@@ -678,18 +700,18 @@ static  char const              irxtime_formatlong[][6] = {
 
 /*public */IRXTime& IRXTime::subSecond(int param)
 {
-    long limit;
-    long temp;
+    long long limit;
+    long long temp;
     
     while (param != 0) {
         limit = param;
-        if (limit < (temp = _second - static_cast<long>(INT_MAX))) {
+        if (limit < (temp = _second - static_cast<long long>(INT_MAX))) {
             limit = temp;
         }
-        if (limit > (temp = _second - static_cast<long>(INT_MIN))) {
+        if (limit > (temp = _second - static_cast<long long>(INT_MIN))) {
             limit = temp;
         }
-        from(_year, _month, _day, _hour, _minute, static_cast<int>(_second - limit), false);
+        from(_year, _month, _day, _hour, _minute, static_cast<int>(_second - limit), _summer, false);
         param -= limit;
     }
     return *this;
@@ -721,43 +743,55 @@ static  char const              irxtime_formatlong[][6] = {
 
 /*public */int IRXTime::compare(IRXTime const& param) const
 {
+    time_t diff;
     int result(0);
     
-    if (_year > param._year) {
-        result = +1;
+    if (_summer == param._summer) {
+        if (_year > param._year) {
+            result = +1;
+        }
+        else if (_year < param._year) {
+            result = -1;
+        }
+        else if (_month > param._month) {
+            result = +1;
+        }
+        else if (_month < param._month) {
+            result = -1;
+        }
+        else if (_day > param._day) {
+            result = +1;
+        }
+        else if (_day < param._day) {
+            result = -1;
+        }
+        else if (_hour > param._hour) {
+            result = +1;
+        }
+        else if (_hour < param._hour) {
+            result = -1;
+        }
+        else if (_minute > param._minute) {
+            result = +1;
+        }
+        else if (_minute < param._minute) {
+            result = -1;
+        }
+        else if (_second > param._second) {
+            result = +1;
+        }
+        else if (_second < param._second) {
+            result = -1;
+        }
     }
-    else if (_year < param._year) {
-        result = -1;
-    }
-    else if (_month > param._month) {
-        result = +1;
-    }
-    else if (_month < param._month) {
-        result = -1;
-    }
-    else if (_day > param._day) {
-        result = +1;
-    }
-    else if (_day < param._day) {
-        result = -1;
-    }
-    else if (_hour > param._hour) {
-        result = +1;
-    }
-    else if (_hour < param._hour) {
-        result = -1;
-    }
-    else if (_minute > param._minute) {
-        result = +1;
-    }
-    else if (_minute < param._minute) {
-        result = -1;
-    }
-    else if (_second > param._second) {
-        result = +1;
-    }
-    else if (_second < param._second) {
-        result = -1;
+    else {
+        diff = difftime(to(), param.to());
+        if (diff > 0) {
+            result = +1;
+        }
+        else if (diff < 0) {
+            result = -1;
+        }
     }
     return result;
 }
@@ -823,10 +857,11 @@ static  char const              irxtime_formatlong[][6] = {
     int year;
     int month;
     int day;
+    int days;
     int hour;
     int minute;
     int second;
-    int days;
+    SummerTimeEnum summer;
     time_t posix;
     bool isampm;
     bool ispm;
@@ -847,6 +882,7 @@ static  char const              irxtime_formatlong[][6] = {
     hour = initial.getHour();
     minute = initial.getMinute();
     second = initial.getSecond();
+    summer = initial.getSummerTime();
     isampm = false;
     ispm = false;
     isdays = false;
@@ -937,6 +973,18 @@ static  char const              irxtime_formatlong[][6] = {
                                 }
                             }
                             if (k >= lengthof(irxtime_gozengogo[j])) {
+                                error = ERROR_INVALID_FORMAT;
+                            }
+                            break;
+                        case SEARCH_SUMMER:
+                            for (k = 1; k < lengthof(irxtime_summer[j]); ++k) {
+                                if (compare(string, &x, irxtime_summer[j][k])) {
+                                    summer = (k == 2) ? (SUMMERTIME_SUMMER) : (SUMMERTIME_STANDARD);
+                                    isposix = false;
+                                    break;
+                                }
+                            }
+                            if (k >= lengthof(irxtime_summer[j])) {
                                 error = ERROR_INVALID_FORMAT;
                             }
                             break;
@@ -1171,7 +1219,7 @@ static  char const              irxtime_formatlong[][6] = {
                     }
                 }
                 if (error == ERROR_OK) {
-                    from(year, month, day, hour, minute, second, false);
+                    from(year, month, day, hour, minute, second, summer, false);
                 }
             }
             else {
@@ -1243,6 +1291,9 @@ static  char const              irxtime_formatlong[][6] = {
                             break;
                         case SEARCH_GOZENGOGO:
                             result.append(irxtime_gozengogo[j][(_hour < 12) ? (1) : (2)]);
+                            break;
+                        case SEARCH_SUMMER:
+                            result.append(irxtime_summer[j][(_summer != SUMMERTIME_STANDARD) ? (2) : (1)]);
                             break;
                         default:
                             switch (fkey) {
@@ -1456,7 +1507,7 @@ static  char const              irxtime_formatlong[][6] = {
     return result;
 }
 
-/*private */IRXTime::ErrorEnum IRXTime::from(int year, int month, int day, int hour, int minute, int second, bool truncate)
+/*private */IRXTime::ErrorEnum IRXTime::from(int year, int month, int day, int hour, int minute, int second, SummerTimeEnum summer, bool truncate)
 {
     tm temp = {
         0
@@ -1469,10 +1520,11 @@ static  char const              irxtime_formatlong[][6] = {
     temp.tm_hour = hour;
     temp.tm_min = minute;
     temp.tm_sec = second;
+    temp.tm_isdst = (summer != SUMMERTIME_STANDARD) ? (1) : (0);
     if ((error = from(mktime(&temp), true)) == ERROR_OK) {
         if (truncate) {
             if (_day != day) {
-                error = from(year, month, day - _day, hour, minute, second, false);
+                error = from(year, month, day - _day, hour, minute, second, summer, false);
             }
         }
     }
@@ -1496,21 +1548,23 @@ static  char const              irxtime_formatlong[][6] = {
         _year = addr->tm_year + 1900;
         _month = addr->tm_mon + 1;
         _day = addr->tm_mday;
+        _days = addr->tm_yday + 1;
+        _week = static_cast<DayOfWeekEnum>(addr->tm_wday);
         _hour = addr->tm_hour;
         _minute = addr->tm_min;
         _second = addr->tm_sec;
-        _days = addr->tm_yday + 1;
-        _week = static_cast<DayOfWeekEnum>(addr->tm_wday);
+        _summer = (addr->tm_isdst > 0) ? (SUMMERTIME_SUMMER) : (SUMMERTIME_STANDARD);
     }
     else {
         _year = 1970;
         _month = 1;
         _day = 1;
+        _days = 1;
+        _week = DAYOFWEEK_THURSDAY;
         _hour = 0;
         _minute = 0;
         _second = 0;
-        _days = 1;
-        _week = DAYOFWEEK_THURSDAY;
+        _summer = SUMMERTIME_STANDARD;
     }
     return error;
 }
@@ -1527,6 +1581,7 @@ static  char const              irxtime_formatlong[][6] = {
     temp.tm_hour = _hour;
     temp.tm_min = _minute;
     temp.tm_sec = _second;
+    temp.tm_isdst = (_summer != SUMMERTIME_STANDARD) ? (1) : (0);
     return mktime(&temp);
 }
 
@@ -1619,6 +1674,15 @@ static  char const              irxtime_formatlong[][6] = {
                 if (compare(string, index, irxtime_ampm[i][0])) {
                     *hint = i;
                     result = SEARCH_AMPM;
+                    break;
+                }
+            }
+            break;
+        case 'S': // S
+            for (i = 0; i < lengthof(irxtime_summer); ++i) {
+                if (compare(string, index, irxtime_summer[i][0])) {
+                    *hint = i;
+                    result = SEARCH_SUMMER;
                     break;
                 }
             }
